@@ -18,7 +18,6 @@ Scrape (Bright Data)  →  Normalize  →  Filter (your stack)  →  Enrich (NVD
 - **Self-healing scrapers** — `bdata scraper heal` recovers from site layout changes
 - **Multi-source aggregation** — THN, Fortinet PSIRT, web search in parallel
 - **Enrichment layer** — CVSS scores, CISA KEV status, EPSS exploitation probability
-- **Async scraper execution** — all scrapers run simultaneously via asyncio
 - **Smart pipeline** — filters first (free), enriches only relevant records (saves API calls)
 
 ## Quick start
@@ -31,7 +30,7 @@ pip install -r requirements.txt
 python main.py --demo
 ```
 
-Open `http://localhost:5000/?mode=demo`
+Open `http://localhost:5000`
 
 ### Live mode (requires Bright Data CLI)
 
@@ -58,7 +57,7 @@ bdata scraper create "https://www.google.com/search?q=critical+CVE+exploited+202
 python main.py
 ```
 
-Open `http://localhost:5000/?mode=scraper`
+Open `http://localhost:5000`
 
 ## Project structure
 
@@ -76,41 +75,83 @@ threatpulse/
 │   ├── normalize.py                 # Raw scraper output → unified schema
 │   ├── enrich.py                    # NVD + CISA KEV + EPSS enrichment
 │   ├── filter.py                    # Tech stack matching engine
+│   ├── database.py                  # SQLite layer (dedup, staleness, CRUD)
 │   └── run_pipeline.py              # Chains: normalize → filter → enrich
 ├── dashboard/
-│   ├── app.py                       # Flask web server + API
+│   ├── app.py                       # Flask web server
 │   └── templates/dashboard.html     # Dark-themed threat dashboard
 └── data/
     ├── demo/                        # Demo mode data
-    └── scraper/                     # Live scraper output
+    ├── scraper/                     # Live scraper output
+    └── threatpulse.db               # SQLite database
 ```
 
 ## How the pipeline works
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│  STEP 1: Scrape (Bright Data, async, parallel)                  │
-│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐            │
-│  │ THN Vulns    │ │ Fortinet     │ │ Web Search   │            │
-│  │ (Discovery)  │ │ (Sitemap)    │ │ (Search)     │            │
-│  │ c_mt1qq...   │ │ c_mt1qt...   │ │ c_mt1r1...   │            │
-│  └──────┬───────┘ └──────┬───────┘ └──────┬───────┘            │
+│  STEP 1: Scrape (Bright Data, threads, parallel)                │
+│  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐             │
+│  │ THN Vulns    │ │ Fortinet     │ │ Web Search   │             │
+│  │ (Discovery)  │ │ (Sitemap)    │ │ (Search)     │             │
+│  │ c_mt1qq...   │ │ c_mt1qt...   │ │ c_mt1r1...   │             │
+│  └──────┬───────┘ └──────┬───────┘ └──────┬───────┘             │
 │         └────────────────┼────────────────┘                     │
 │                          ↓                                      │
 │  STEP 2: Normalize (unified schema, deduplicate by CVE ID)      │
 │                          ↓                                      │
 │  STEP 3: Filter by tech stack (FREE, instant)                   │
-│    37 records → 9 relevant (28 discarded, zero cost)            │
+│    341 records → 23 relevant (318 discarded, zero cost)         │
 │                          ↓                                      │
 │  STEP 4: Enrich only relevant records                           │
-│    NVD API → CVSS vectors, CWE IDs                              │
+│    NVD API → CVSS vectors, CWE IDs (with retry on 429)          │
 │    CISA KEV → actively exploited status                         │
 │    EPSS → probability of exploitation                           │
 │                          ↓                                      │
-│  STEP 5: Dashboard (Flask, dark theme)                          │
+│  STEP 5: Save to SQLite + Dashboard (Flask, dark theme)         │
 │    Shows: severity, CVSS, KEV badge, EPSS%, affected products  │
 └─────────────────────────────────────────────────────────────────┘
 ```
+
+## Database schema
+
+SQLite at `data/threatpulse.db`, 4 tables:
+
+```
+scraper_runs
+├── scraper_id        TEXT
+├── collector_id      TEXT
+├── run_at            TEXT
+├── status            TEXT (success/failed)
+├── records_count     INTEGER
+└── raw_data          TEXT (JSON)
+
+vulnerabilities (deduplicated by cve_id)
+├── cve_id            TEXT UNIQUE
+├── title, description, severity, cvss_score, cvss_vector
+├── affected_products TEXT (JSON array)
+├── source, source_url, published_date
+├── first_seen, last_seen   (tracking freshness)
+├── kev_status        INTEGER (0/1)
+├── epss_score, epss_percentile
+├── cwe_ids           TEXT (JSON array)
+├── remediation, tags TEXT
+└── enriched_at       TEXT
+
+tech_matches (links vulns to your stack)
+├── vuln_id           FK → vulnerabilities.id
+├── category          TEXT
+├── product           TEXT
+└── relevance_score   INTEGER
+
+run_history (pipeline run audit log)
+├── run_at            TEXT
+├── total_scraped, total_normalized, total_relevant
+├── new_threats, resolved_threats
+└── summary           TEXT (JSON)
+```
+
+Indexes on `cve_id`, `severity`, `last_seen`, `kev_status`, `vuln_id`, `run_at`.
 
 ## Tech stack config
 
@@ -133,20 +174,7 @@ The filter matches threats against every entry in this config. Only threats affe
 
 ## Dashboard
 
-| URL | Mode | Description |
-|---|---|---|
-| `http://localhost:5000/?mode=demo` | Demo | Sample data, no Bright Data needed |
-| `http://localhost:5000/?mode=scraper` | Live | Real scraper output |
-
-### API endpoints
-
-| Endpoint | Returns |
-|---|---|
-| `GET /api/summary` | Threat counts, severity breakdown |
-| `GET /api/threats` | All filtered threats |
-| `GET /api/threats/critical` | Critical severity only |
-| `GET /api/threats/kev` | CISA KEV entries only |
-| `GET /api/health` | Service status |
+Opens at `http://localhost:5000` after running `python main.py`.
 
 ## Self-healing demo
 
@@ -168,10 +196,10 @@ Phase 5: Run scraper (recovers, same collector_id)
 
 | Step | Cost |
 |---|---|
-| 3 scraper runs (parallel) | ~9 Bright Data credits |
+| 3 scraper runs (parallel via threads) | ~9 Bright Data credits |
 | CISA KEV API | Free |
 | EPSS API | Free |
-| NVD API | Free (rate limited) |
+| NVD API | Free (rate limited, with retry) |
 | **Total per run** | **~9 credits** |
 
 Pipeline filters first (free), then enriches only relevant records — saving ~75% of API calls compared to enriching everything.
@@ -187,7 +215,6 @@ python main.py --demo
 
 # Dashboard only
 python main.py --serve-only
-python main.py --serve-only --demo
 
 # Create scrapers
 python scrapers/setup_scrapers.py --create
