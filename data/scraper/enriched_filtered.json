@@ -1,0 +1,1135 @@
+[
+  {
+    "cve_ids": [
+      "CVE-2026-20685"
+    ],
+    "title": "ThreatsDay: GhostJacking AI Attacks, EtherHiding ClickFix, Cursor CLI Flaw + 17 More Stories",
+    "description": "Some weeks have one big security story. Others bring many smaller updates that are easy to miss but still matter. This week has plenty of them, covering cloud services, AI tools, malware, data breaches, scams, and new attack methods. The threats change every week. Subscribe, and we\u00e2\u20ac\u2122ll alert you when each new ThreatsDay Bulletin is out. An ongoing campaign dubbed City-Forum has been observed targeting unauthenticated guest user access in both Salesforce Experience Cloud sites and ServiceNow (SNOW) Service Portals. \"A single server is pulling records out of Salesforce Experience Cloud sites and ServiceNow (SNOW) Service Portals, from infrastructure that has been standing since March 2025,\" Reco said. \"Except for Aura , the attacker reaches Salesforce Lightning Web Runtime ( LWR ) sites through the UI-API, a data layer we have not seen any public tool or write-up about, and it hammers a native ServiceNow Service Portal search endpoint that has almost no online documentation or well-known open source tools.\" The IP address in question is 158.220.87[.]79, which resolves to the domain \"city-forum[.]com,\" giving the campaign its name. The use of little known techniques in the activity points to an advanced threat actor. Data is exfiltrated from Salesforce LWR sites using GraphQL. Targets include telecoms, banks and financial-services firms, enterprise-software vendors including security and data-privacy companies, and public-sector portals. Per Reco, the busiest target recorded more than 560,000 events from the attacker's IP address, with nearly all of them related to guest Aura enumeration. ShipMonk, one of Trezor's shipping providers, has experienced a data breach that exposed sensitive customer order data, including full names, shipping addresses, phone numbers, and email addresses. \"This data breach can potentially affect new customers who received an order from the following countries: the U.S., the U.K., Sweden, Colombia, Brazil, Italy, and Portugal between 10th of May and 8th of August 2026,\" Trezor said . Cursor has fixed an issue in its command-line (CLI) coding agent that allowed a cloned repository to run any command on a developer's machine before they were prompted if they trusted it, and outside the sandbox even when the sandbox had been explicitly enabled. \"A repository could execute any command it chose on your machine, as you, the moment you started Cursor's CLI agent in it with -w,\" Manifold Security said . \"It ran before the workspace-trust dialog, and fired even for users who had explicitly passed --sandbox enabled. The command sat in a normal tracked file, .cursor/worktrees.json, so it arrived with an ordinary git clone. Nothing on that path constrained it: reading ~/.ssh, taking cloud credentials from the environment, opening a reverse shell, writing persistence.\" Following responsible disclosure on July 20, 2026, a patch was released three days later. Okta has published details about Work Panel, an operator console that's used by threat actors running vishing campaigns targeting identity providers, including itself. \"Work Panel is a multi-tenant platform that packages everything an operator needs to run a vishing-driven account takeover operation,\" the company said . \"Registering a new phishing domain, cloning a target brand, and standing up a new isolated phishing site are each one-button operations. New campaigns can be launched in minutes.\" Work Panel is used by infrastructure owners, campaign managers, and outsourced callers, indicating a cybercrime ecosystem that supports such voice phishing campaigns at scale. One threat actor that uses Work Panel is UNC6671 (aka Cordial Spider and O-UNC-045). \"It is a full web application designed to run a vishing-driven account takeover business,\" Okta added. \"The console organizes the work into multiple sections covering target recon, voice-call routing, brand cloning, infrastructure provisioning, live session management, captured-credential review, and an audit log. Different roles see different tabs, and the access boundary is enforced on the server rather than hidden in the client.\" A new attack called GhostJacking expands on Agentjacking to trick AI agents into running arbitrary code on developer machines, once again highlighting the need for securing the AI supply chain. The attack can leverage something as simple as a poisoned log or alert to make the agent act on the attacker's data, escalate privileges and pivot to enterprise cloud infrastructure, exfiltrate data to the attacker (in this case, using a now-patched sandbox escape in Anthropic's Claude Desktop), and establish persistence by leaving a backdoor in the agent's configuration. \"Companies are handing AI agents the keys to their code, their monitoring, and their infrastructure,\" Tenet Security said . \"An AI cannot tell a real instruction from a trap hidden in the data it reads. The usual defenses do not fire, because nothing breaks a rule. Every step is something the agent was already allowed to do.\" The findings underscore the need for guardrails around AI agents to protect against hijacking attacks that leverage their legitimate access and elevated privileges against their users. Meta has announced a new optional feature called Scam Alert that makes use of an on-device machine learning model to alert a user about potential scam messages. \"No message content leaves the device for classification or is auto-reported to WhatsApp, Meta, or anyone else,\" the company said . \"The feature complements end-to-end encryption while enabling a user-controlled, optional scam alert when the model believes there's a likely scam.\" The model, Meta added, is trained on patterns observed in scam conversations from reports that users have sent to it. Meta said it has also built a privacy-preserving federated analytics pipeline that collects only two categories of data: counts of how often warnings were triggered and counts of what action users took afterward, such as blocking or marking a chat as trusted. Messaging app Signal has announced a new automatic key verification feature that complements the existing safety number system to provide an \"additional, streamlined way to confirm that there's no unexpected party between you and the other 'end' of an end-to-end encrypted session.\" Signal said : \"It works through a system of verifications performed by you, your Signal connections, and third-party auditors that together provide the same assurance as manually verifying safety numbers. Unlike safety numbers, these verifications are done independently and do not require an in-person meeting or a secondary communication channel. This system of verifications ensures that the association between a phone number or username and its public encryption key is globally consistent and transparent to all participants in Signal's ecosystem.\" Users can enable automatic key verification in Signal by going to Settings > Privacy > Advanced and enabling the setting. A new approach devised by Tracebit has proven very effective at stopping AI agents from fully compromising targeted environments. While prompt injections have proven to be a thorny problem ailing AI systems, the technique, called Context Bombs, uses prompt injections not to hijack AI agents to defend against them. Using decoy resources as tripwires that alert defenders about potential unauthorized activity is not wholly novel. These are known as canaries , which are hidden inside real files or networks that trigger an alert the moment it is accessed. Only in this case, it is used to stop the AI agent from performing something malicious. \"A context bomb is simply a string crafted to provoke that refusal for benign reasons rather than malicious ones,\" Tracebit said . \"The defender plants it, and when the model or model provider encounters it, safety mechanisms are triggered which stops the agent from proceeding.\" The findings are significant in light of the fact that autonomous and semi-autonomous AI agents accelerate the pace and scale of attacks, while defenders have little time to react and counter them. A fake version of CCleaner delivered via a bogus lookalike page (\"ccleanerwind[.]top\") is being used to infect Windows users with a malicious Chrome extension called GhostDesk, which harvests sensitive data from the browser. \"Once installed, the fake application launches an attack that modifies Chrome, installs malicious extension components, and gives attackers the ability to steal credentials, capture screenshots, and log keystrokes,\" Malwarebytes said . There is evidence to suggest that the same mechanism is being used to serve counterfeit versions of 7-Zip and Adobe Acrobat Reader. Apple has paid a $150,000 bug bounty to a security researcher who found a way to leak sensitive data from Private Cloud Compute ( PCC ), its secure AI inference environment. The vulnerability, rooted in a component called \"darwin-init\" and tracked as CVE-2026-20685 (CVSS score: 6.5), allows an attacker in a privileged network position to leak sensitive information. Apple said the issue was addressed with improved validation. Drinor Selmanaj, who discovered the issue, described it as a \"path traversal in the code that provisions PCC nodes, darwin-init, that lets an attacker write files as root and compromises privacy and security guarantees in PCC.\" An active ClickFix malware campaign leveraging a novel technique known as EtherHiding using the Polygon blockchain to obfuscate and dynamically rotate command-and-control (C2) infrastructure. \"A compromised WordPress site was found serving a malicious script embedded in its robots.txt file,\" Cribl said . \"When visited, the script queries the Polygon blockchain via public RPC endpoints, calling a smart contract to retrieve an encoded second-stage C2 domain. By storing malicious domains in blockchain transaction data rather than traditional infrastructure, the attacker gains a resilient, censorship-resistant delivery mechanism that is difficult to detect and block through conventional means.\" Malicious skills or extensions installed directly from public marketplaces, while offering an extensibility model, also exposes developers to an attack surface, where an AI coding agent is leveraged as a delivery and execution mechanism for malicious actions, such as credential theft, by taking advantage of the fact that it was configured in an \"unattended\" or \"auto-approve\" execution mode, granting it the ability to execute shell scripts without requiring user confirmation. \"Located within the agent's local skills directory was a package disguised under an innocuous, business-aligned name designed to mimic a routine approval workflow,\" CyberProof said . The package is designed to enumerate running browser processes and decrypt stored credentials. \"Because the agent operated in auto-approve mode, this entire sequence executed silently twice within 15 minutes without presenting authorization prompts to the end user,\" CyberProof said. \"Standard binary reputation lookups, signature validation, and application allow-listing controls failed to trigger alerts because the malicious payload resided entirely within the uncompiled script content of an add-on skill package.\" The U.S. Federal Bureau of Investigation (FBI) has warned of sexual exploitation (SE) actors targeting adult and underage victims by illegally accessing their social media and personal accounts to steal and post their explicit content for sale on criminal marketplaces. \"SE actors are using a variety of social engineering and cyber intrusion tactics to target specific individuals of interest \u00e2\u20ac\u201d who may or may not be known to the actor \u00e2\u20ac\u201d or general targets of opportunity,\" the FBI said . \"Once the sexually explicit images or videos are accessed and stolen, typically unbeknownst to the victim, SE actors are sharing or posting the content within community forums or selling them to illicit marketplaces. Personally identifiable information \u00e2\u20ac\u201d such as name, date of birth, email, phone number, and social media username \u00e2\u20ac\u201d is often posted along with the victim's explicit content, exposing them to continued re-victimization.\" Initial access methods include trying different passwords or PINs found on data leak sites and other sources, social media customer service impersonation, and phishing. ExfilSquad has emerged as a new threat actor to watch out for after having claimed responsibility for a string of high-profile data breaches. The group first appeared in mid-2026. \"Notably, the group does not typically deploy ransomware or destructive malware; instead, they threaten to leak stolen data on a dedicated onion-based Data Leak Site (DLS) unless a ransom is paid,\" Resecurity said . \"The notable pattern is the strong targeting of CRM, internal case management systems, and AI platforms used to collaborate with consumers.\" The leaked files are accessible over a torrent file, allowing it to reach a broader audience. \"Once stolen data has been released, it is not possible to stop its sharing via the P2P network or remove the torrent file, because other participants involved in seeding can easily resume downloads,\" Resecurity said. Google has announced that Chrome's anti-abuse systems reduced unwanted notifications on Android by more than 7 billion per day during the first quarter of 2026, as it tackles notification abuse . The company said it has built \"advanced behavioral detection\" to more quickly identify and remove permissions from networks of sites that coordinate and send abusive notifications, implemented message rate limits for the Push API on Firebase Cloud Messaging (FCM) to tackle high-volume notification abuse, and streamlined the notifications permission model to \"prioritize user agency while making it harder for abusive actors to acquire and retain permissions.\" A set of six npm packages have been observed using an Ethereum wallet address linked to North Korean threat actors to fetch next-stage JavaScript payloads. Three of them (@kolbo/mcp@1.57.1, agentgui@1.0.1127, and godot-kit@1.0.1786316795) are legitimate npm packages that seem to have been hijacked to publish malicious versions, while three others have been flagged as malicious: envpack-conf@1.0.1, postcss-initial-provider@3.0.4, and tailwindcss-motion-advanced@1.0.1. \"The payload uses Ethereum blockchain transactions to locate infrastructure hosting additional JavaScript malware,\" Sonatype said . \"When executed, the loader queries Ethereum for an outbound transaction from that wallet and reads bytes from the transaction\u00e2\u20ac\u2122s recipient address. Those bytes are decoded into two IPv4 addresses, which the malware treats as primary and secondary command-and-control (C2) endpoints. The Ethereum transaction acts as a dead drop for instructions telling the malware where to connect next.\" The technique has been codenamed NullReceiver , an evolution of EtherHiding. Recorded Future's Insikt Group said it analyzed 24 threat actors advertising crypting services and products within the past year, describing it as a market that is competitive, reputation-driven, and primarily focused on Windows payloads. Crypters are tools that modify malicious software to bypass detection and complicate analysis. While advanced crypters offer portability, anti-analysis, process injection, persistence, and security product bypass capabilities, less-advanced crypters generally provide basic payload obfuscation techniques. Some of the threat actors marketing such tools include mrlapis (VIP Crypt), o1oo1 ( ASMCrypt and SnappyClient aka TOP RAT), ImComplexed, BestCrypt0r, Cruciferra , DefCrypt, ghostcrypt, GoldenCrypt , and mila.laktina. \"Providers advertise through underground forums, restricted communities, chat platforms, clearnet sites, and social media accounts,\" the company said . \"They compete through tiered pricing, antivirus (AV) detection scores of crypted samples, discounts, malware-developer partnerships, private or shared stubs, and promised turnaround times for re-crypting detected payloads.\" Cybersecurity firm Dragos said it identified 1,140 ransomware incidents affecting industrial organizations worldwide in the second quarter of 2026, a 12% increase compared to Q1. \"Manufacturing was the most affected sector with 747 incidents (65%) across all subsectors,\" it said . ICS-related organizations (engineering firms, system integrators, and equipment manufacturers) accounted for the second-most-impacted sector, with 117 incidents, reflecting persistent industrial supply chain exposure. The extortion model continued to shift away from encryption toward data theft-only operations, and geopolitically influenced activity, including state-aligned actors operating behind ransomware branding, persisted throughout the quarter.\" Qilin (140), Akira (129), The Gentlemen (125), DragonForce (76), and LockBit 5.0 (62) were responsible for the largest victim volumes in Q2. GitHub said it has enhanced the GitHub Advisory Database to ingest malware reports from OpenSSF's malicious-packages repository, to account for eight major package ecosystems: npm, PyPI, Maven, RubyGems, NuGet, Go, crates.io, and PHP Composer. \"Dependabot and GitHub will now alert you if you use a malicious dependency across most package ecosystems,\" GitHub said . \"Malware alerts are opt-in: enable them in your repository, organization, or enterprise security settings. Dependabot will match your dependencies against malware advisories in the Advisory Database, including a backfill against existing advisories, starting the moment you turn it on.\" Cloudflare said it mitigated 23.2 million network-layer and 29.64 trillion HTTP DDoS requests since the start of 2026. Hyper-volumetric DDoS \u00e2\u20ac\u201d attacks defined as exceeding 1 terabit per second (Tbps), 1 billion packets per second (Bpps), or 1 million requests per second (Mrps) \u00e2\u20ac\u201d have witnessed a surge, with the web infrastructure company mitigating 805 network-layer attacks exceeding 1 Tbps, representing a more than six-fold increase over the previous quarter. The top attacked industries during the time period were media, gambling, IT services, computer software, and telecommunications providers. The U.S., China, Indonesia, Turkey, and France were the most attacked locations, while the traffic originated from Brazil, the U.S., Indonesia, China, and Germany.",
+    "severity": "Medium",
+    "cvss_score": 6.5,
+    "cvss_vector": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+    "affected_products": [
+      "Cloudflare"
+    ],
+    "affected_versions": [],
+    "published_date": "2026-08-13T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/threatsday-ghostjacking-ai-attacks.html",
+    "kev_status": false,
+    "epss_score": 0.00194,
+    "cwe_ids": [
+      "CWE-20",
+      "CWE-22"
+    ],
+    "attack_vector": "",
+    "remediation": "",
+    "tags": [
+      "artificial intelligence",
+      "Cloud security",
+      "Cybercrime",
+      "cybersecurity",
+      "Malware",
+      "Privacy",
+      "ransomware",
+      "Threatsday Bulletin",
+      "Vulnerability"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "virtualization",
+        "product": "Hyper-V"
+      },
+      {
+        "category": "languages",
+        "product": "Java"
+      },
+      {
+        "category": "languages",
+        "product": "Go"
+      },
+      {
+        "category": "languages",
+        "product": "Ruby"
+      },
+      {
+        "category": "browsers",
+        "product": "Chrome"
+      }
+    ],
+    "relevance_score": 65,
+    "epss_percentile": 0.09473,
+    "description_nvd": "An attacker in a privileged network position may be able to leak sensitive information. A path handling issue was addressed with improved validation. This issue is fixed in PCC Release 5E290.3.",
+    "nvd_published": "2026-05-18T16:16:29.570",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-20685"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-52813",
+      "CVE-2026-52810",
+      "CVE-2026-43774",
+      "CVE-2026-33696"
+    ],
+    "title": "ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit, and More",
+    "description": "A lot of this week\u00e2\u20ac\u2122s trouble starts with something trusted doing exactly what it was allowed to do. The threats change every week. Subscribe, and we\u00e2\u20ac\u2122ll alert you when each new ThreatsDay Bulletin is out. In new research, Check Point has reverse engineered Microsoft Defender's Defender Boot-Time Removal driver (\"BTR.sys\") and demonstrated that it's possible to repurpose the signed remediation driver as a universal kernel operation engine to bypass endpoint security solutions by exploiting a \"golden window\" between system start and user mode initialization without having to rely on the bring your own vulnerable driver (BYOVD) method. \"Because BTR.sys is a legitimate Microsoft-signed component, signature-based blocking is ineffective,\" security researcher Ji\u00c5\u2122\u00c3\u00ad Vinopal said . \"Furthermore, a well-crafted weaponization tool (like BTR_CLI ) intentionally mimics the operational footprint of the legitimate Windows Defender remediation process.\" The U.S. Department of Justice (DoJ) has charged 17 members of the Mabna Institute, an Iran-based company that, since at least 2013, has conducted a coordinated campaign of cyber intrusions into computer systems for 144 U.S.-based universities, 178 foreign universities, at least 42 U.S.-based private sector companies, at least 11 foreign private sector companies, at least five U.S. federal and state government agencies, and at least two non-governmental organizations (NGOs). The Mabna Institute has been accused of stealing more than 31 TB of academic data and intellectual property from these universities, as well as the email accounts of employees at the private sector companies, government agencies, and NGOs. In all, the Mabna Institute targeted more than 100,000 accounts of professors around the world, successfully compromising approximately 8,000 of them. The defendants carried out these intrusions on behalf of Iran's Islamic Revolutionary Guard Corps (IRGC). The Mabna Institute was founded by Gholamreza Rafatnejad and Ehsan Mohammadi around 2013. \"The campaign started in approximately 2013, continued through at least December 2017, and broadly targeted all types of academic data and intellectual property from the systems of compromised universities,\" the DoJ said. \"In addition to stealing academic data and login credentials for the benefit of the Government of Iran, the defendants also sold the stolen data through two websites, Megapaper.ir (Megapaper) and Gigapaper.ir (Gigapaper).\" The U.S. Department of State is offering a $10 million reward for information about five of the defendants, or associated individuals or entities. \"Mabna represents the privatization of state espionage: a contractor selling stolen research to whoever's paying, with the IRGC as an anchor client rather than a sole owner,\" Shmuel Gihon, Security Research Team Lead of Exposure Management at Check Point, told The Hacker News. \"That's the trend to watch: capable, deniable, commercially-run crews doing state-level work at industrial scale, with universities as the perfect target. They offer enormous IP value, thin identity controls, and an open-access culture that phishing exploits directly. We've seen this blurring of cyber-criminal and state-sponsored activity before, but historically it's been more associated with Russian-speaking crews. What this case shows is that Iran and the IRGC are increasingly playing the same game.\" A new Grandoreiro malware campaign has been found abusing the legitimate Duplicate Files Finder (DFF) application to run malicious code via DLL sideloading. According to telemetry data from Acronis, Grandoreiro activity remains concentrated in Latin America, with Mexico, Spain, Peru, and Argentina accounting for the lion's share of infections. \"The initial sample incorporates extensive anti-analysis functionality, including sandbox detection, virtual machine artifact checks, process blacklisting and environment profiling designed to evade automated analysis systems,\" Acronis said . \"These checks are performed before any attempt to contact the command-and-control (C2) infrastructure, suggesting that avoiding analysis is a high priority for the operators.\" ErrTraffic -generated ClickFix campaigns have been observed attempting to deliver Cruciferra , which, in turn, employs a legitimate but vulnerable driver (\"DCRCVDrv.sys\") as part of a BYOVD attack to escalate privileges and terminate security processes. ErrTraffic, sold by a threat actor named LenAI, is a malware-as-a-service (MaaS) framework and a traffic distribution system (TDS) that's designed to distribute multiple threats through compromised WordPress websites, ClickFix social engineering, and EtherHiding. In recent months, ErrTraffic has been used to deliver Remus Stealer, Vidar Stealer, Okobot, LegionLoader, OnionDrop-related payloads, and BabaDedaLoader, per WatchGuard . \"Victims land on compromised WordPress sites injected with an obfuscated ErrTraffic-generated JavaScript loader,\" eSentire said . \"The loader resolves its C2 domain by querying a Polygon smart contract, then sends a request to the C2 to retrieve the next stage to serve a ClickFix lure.\" The end goal of the attack is to launch Remus Stealer via process hollowing. OpenAI has announced a privacy-centric safety approach to monitoring model misuse. The company said it's previewing a new service to select customers that it calls Private Safety Processing, which keeps tabs on potential abuse without retaining customer data. \"For ZDR deployments, customer content remains on infrastructure the customer controls,\" OpenAI said. \"We are also developing an option in which content is stored on OpenAI infrastructure, encrypted with keys controlled by the customer. In both cases, automated systems can identify potential misuse and return limited safety signals without exposing the underlying prompts or responses to OpenAI personnel.\" The system clearly takes aim at rival Anthropic, which has a 30-day retention policy for business customers who want to use its Mythos-class models. In a related development, Google has showcased Homomorphic Encryption Intermediate Representation ( HEIR ), which enables cryptographically secure private AI inference on encrypted inputs. \"HEIR (Homomorphic Encryption Intermediate Representation) is an open-source compiler toolchain and development platform for homomorphic encryption,\" Google said. \"In particular, HEIR can convert pre-trained AI models that operate on unencrypted data to operate on encrypted inputs.\" A new AI-powered service called Kriminal AI offers paying customers a way to get answers about everything, without any of the filters or guardrails that are typically implemented by AI platforms. \"Kriminal.AI gives you raw, uncut intelligence \u00e2\u20ac\u201d the questions other AIs refuse to touch,\" the website claims. The service claims to have more than 2,300 users. Kriminal AI follows WormGPT, FraudGPT, and Xanthorox into a market that has expanded quickly to attract users who may be frustrated by safety, security, and ethical safeguards embedded into widely used models. Subscriptions for Kriminal AI start at $12.99/month and go all the way to $99.00/month. The most concerning aspect is that the service is not lurking in the dark web. It's accessible on the clearnet, and comes with a tagline: \"No filters. No guardrails. No \"I can't help with that.\" Kriminal.AI gives you raw, uncut intelligence \u00e2\u20ac\u201d the questions other AIs refuse to touch.\" According to ThreatDown , the service appears to make use of Grok for primary inference; Google Cloud and Cloudflare for hosting; Anthropic's Claude for a long-context model layer; Llama routed through OpenRouter for certain specialized tasks; Tavily for live search; NowPayments for cryptocurrency checkout (no KYC included, apparently); and Cloudflare/Let's Encrypt for DNS and TLS. Apple has agreed to make changes to its App Tracking Transparency (ATT) feature in Germany, after the Federal Cartel Office, or FCO, found the feature gave its own \u00e2\u20ac\u2039apps more favorable consent prompts than those of \u00e2\u20ac\u2039third-party developers. Apple has four months to implement the changes after. According to a statement issued by Apple, the changes will apply in almost all \u00e2\u20ac\u2039European Union countries. \"The differences between the consent request used for Apple\u00e2\u20ac\u2122s own offerings and the consent request predefined by Apple for third-party apps exceeded what could be justified based on differences in types of data processing,\" FCO said . \"The wording, design and selection options of the request used for Apple\u00e2\u20ac\u2122s own offerings had the potential to encourage users to give their consent, whereas they had the potential to discourage consent for third-party apps. In addition, third-party apps in some cases had to request consent several times even when users had already given data protection law-compliant consent.\" Apple was fined \u00e2\u201a\u00ac98.6 million (then $116 million) in December 2025 by Italy's antitrust authority after finding that ATT restricted App Store competition. Claroty's Team82 has discovered 23 vulnerabilities in Copeland XWEB Pro controllers, including those that can be chained to bypass security mechanisms and achieve root-level remote code execution. A compromised controller could be used to remotely manipulate refrigeration equipment, including cooling fans and compressors, and conceal the resulting temperature increase while silently allowing the food to spoil. Multiple vulnerabilities have also been disclosed in Danfoss AK-SM 800A refrigeration controllers, including a \"hidden 'code-of-the-day' authentication mechanism that could be abused to bypass normal authentication, a command-injection vulnerability leading to remote code execution.\" A second flaw allowed authenticated users to inject arbitrary Nginx configuration directives, which could be abused to manipulate web traffic and trigger a denial-of-service condition. All the identified vulnerabilities have been fixed by the respective vendors. A hand-written Windows backdoor has been found to store its C2 domain as the number of trailing spaces in a fake desktop.ini file. The 12 KB backdoor was discovered by Gen Digital on a single corporate workstation while hunting for unusual WMI persistence. \"The malware was small, had a limited command set and disguised itself as legitimate Realtek software,\" Gen said . \"Its most unusual feature was its configuration: the address of its command-and-control server was not stored as readable text or encrypted data, but encoded in the number of spaces on each line of a Windows 'desktop.ini' file. To a user, and to many automated inspection systems, the file would appear almost empty. To the malware, those spaces spelled out its server address.\" There is no evidence connecting the backdoor to a known threat actor. The absence of related samples indicates that it may have been a deliberately targeted operation. A maximum-severity security flaw in Gogs (CVE-2026-52813, CVSS score: 10.0) could be exploited to achieve remote code execution through Git hooks. \"Organization names containing path traversal sequences (../) are accepted by Gogs, and repositories under them are written to paths following these path traversals,\" according to a June 2026 advisory. \"This allows storing/retrieving data for repositories at arbitrary locations on the filesystem. By creating a nested structure of Git repositories, one can overwrite the other's hooks configuration to result in Remote Code Execution (RCE).\" The issue was addressed in version 0.14.3, alongside patches for CVE-2026-52810 (a logic bug to write on read-only repositories) and GHSA-6vxv-wg6j-5qwp (an XSS flaw in the outdated version of \"jsvine/notebookjs\" used to render Jupyter notebook files). Aikido Security has been credited with discovering and reporting the flaws. Details have emerged about a now-patched out-of-bounds read flaw in Apple macOS Spotlight ( CVE-2026-43774 , CVSS score: 5.5) that could be exploited by a malicious app to access sensitive user data. The vulnerability was patched by the iPhone maker in late July 2026. \"The vulnerability is in the Spotlight PostScript plugin,\" Iru researcher Csaba Fitzl said , adding an attacker can use a specially crafted .ps file to trigger the vulnerability. It requires three conditions to be met: (1) The file is at least 4000 bytes, (2) A DSC comment keyword (e.g., %%Creator:) appears somewhere in the first 4000 bytes, and (3) The bytes following the keyword, up to byte 4000, contain no control characters. A critical security flaw has been disclosed in @circleci/mcp-server-circleci that could result in remote code execution by means of a specially crafted request. \"With one well-placed request, an attacker achieves an unauthenticated RCE in your CI/CD pipeline, taking full control of your build secrets and cloud identities,\" Remedio said . The attack takes advantage of the fact that the Host and Origin headers associated with an HTTP request used to block browser-based attacks can be set by a network-adjacent threat actor. \"Send a simple HTTP request that says Host: localhost in the HTTP header with no Origin, and you get right through,\" Remedio said. \"Once in, you can freely communicate with connected tools. Call the \"run pipeline\" tool, hand it the pipeline configuration you wrote, and add a step to run your commands. CircleCI executes it using the organization's token.\" The vulnerability has been fixed in version 0.19.2 of the npm package. A critical vulnerability in n8n, an open-source workflow automation platform, can allow an authenticated user with permission to create or modify workflows to exploit a prototype pollution vulnerability in the XML and the GSuiteAdmin nodes and achieve remote code execution on the n8n instance. The issue ( CVE-2026-33696 , CVSS score: 9.4) has been fixed in versions 2.14.1, 2.13.3, and 1.123.27. Security researcher Simon Koeck, who discovered the Flaw, said the prototype pollution alone is serious enough to crash the entire n8n instance, but can be chained to obtain full code execution and allows the attacker's command to be run as the n8n process user. In late 2024, reports emerged of a Salt Typhoon campaign that targeted T-Mobile and other major U.S. telecommunications companies as part of a cyber espionage effort to gain access to valuable customer data. Although the activity was caught before the Chinese cyber spies could siphon any data from T-Mobile's networks, the company has now revealed to Bloomberg that its staff spent months looking for suspected intruders without much success, only to eventually trace unusual behavior on one of its systems coming from a Chicago router belonging to a different telecom company. Jeff Simon, T-Mobile's chief information officer, said he and three others drove to the data center that housed the compromised device and \"pulled out a pair of scissors\" to cut the cable. Chinese AI startup Z.ai has released GLM-5.3, a new AI model that it said is better suited for complex coding and long-horizon tasks. \"GLM-5.3 is state of the art on CyberGym for vulnerability discovery, and its gains are largest further up the exploitation chain, where it more than doubles GLM-5.2 on exploitation benchmarks,\" it said. \"GLM-5.3 did not simply become better at identifying isolated flaws: it began to reason across multiple stages of exploitation, forming coherent plans for complete exploitation chains,\" Z.ai said it has been working with several security teams in China to run its open-source models against real-world codebases, identifying 2,436 vulnerabilities across 269 projects, including 1,097 medium-to-high severity issues. \"The findings span system kernels, operating systems, browser engines, open-source infrastructure, web applications, and network protocols,\" it said. \"Many had remained unnoticed for years or even decades, with the oldest dating back roughly 40 years.\" Despite these advances, benchmarks show that GLM-5.3 lags behind Anthropic Mythos 5 in converting discovered flaws into working attacks.",
+    "severity": "Critical",
+    "cvss_score": 10.0,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+    "affected_products": [
+      "Cloudflare"
+    ],
+    "affected_versions": [],
+    "published_date": "2026-08-20T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html",
+    "kev_status": false,
+    "epss_score": 0.00765,
+    "cwe_ids": [
+      "CWE-23"
+    ],
+    "attack_vector": "",
+    "remediation": "",
+    "tags": [
+      "artificial intelligence",
+      "Cloud security",
+      "Cybercrime",
+      "cybersecurity",
+      "Malware",
+      "Privacy",
+      "ransomware",
+      "Threatsday Bulletin",
+      "Vulnerability"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "software",
+        "product": "Nginx"
+      },
+      {
+        "category": "languages",
+        "product": "Java"
+      },
+      {
+        "category": "languages",
+        "product": "Go"
+      }
+    ],
+    "relevance_score": 45,
+    "epss_percentile": 0.52696,
+    "description_nvd": "Gogs is an open source self-hosted Git service. Prior to 0.14.3, organization names containing path traversal sequences (../) are accepted by Gogs, and repositories under them are written to paths following these path traversals. This allows storing/retrieving data for repositories at arbitrary locations on the filesystem. By creating nested structure of Git repositories, one can overwrite the other's hooks configuration to result in Remote Code Execution (RCE). This vulnerability is fixed in 0.14.3.",
+    "nvd_published": "2026-06-24T21:16:57.353",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-52813"
+  },
+  {
+    "cve_ids": [
+      "CVE-2024-27983",
+      "CVE-2023-45288",
+      "CVE-2024-24549",
+      "CVE-2024-30255",
+      "CVE-2024-27316",
+      "CVE-2024-28182",
+      "CVE-2024-3302"
+    ],
+    "title": "HTTP/2 CONTINUATION Frames Vulnerability",
+    "description": "HTTP CONTINUATION Flood can be used to launch a serious DoS attack that can cause the crash of the target server with just one attacking machine (or even one TCP connection to the target).\n\nIt works by: - initiating an HTTP stream against the target - then sending headers and CONTINUATION frames with no END_HEADERS flag set - that creates a never ending stream that could even cause an instant crash\n\nThis works because there's many HTTP/2 implementations do not properly limit or sanitize the amount of CONTINUATION frames sent within a single stream.\n\nCVE-2024-27316 for Apache HTTP Server (httpd): HTTP/2 incoming headers exceeding the limit are temporarily buffered in nghttp2 in order to generate an informative HTTP 413 response. If a client does not stop sending headers, this leads to memory exhaustion.\n\nCVE-2024-24549 for Apache Tomcat: When processing an HTTP/2 request, if the request exceeded any of the configured limits for headers, the associated HTTP/2 stream was not reset until after all of the headers had been processed.\n\nCVE-2024-30255 for Envoy proxy (nghttp2): Envoy's HTTP/2 codec allows the peer to send an unlimited number of CONTINUATION frames even after exceeding Envoy's header map limits. This allows an attacker to send a sequence of CONTINUATION frames without the END_HEADERS bit set causing CPU utilization, consuming approximately 1 core per 300Mbit/s of traffic.\n\nCVE-2023-45288 for Golang: An attacker may cause an HTTP/2 endpoint to read arbitrary amounts of header data by sending an excessive number of CONTINUATION frames. Maintaining HPACK state requires parsing and processing all HEADERS and CONTINUATION frames on a connection. When a request's headers exceed MaxHeaderBytes, no memory is allocated to store the excess headers, but they are still parsed. This permits an attacker to cause an HTTP/2 endpoint to read arbitrary amounts of header data, all associated with a request which is going to be rejected. These headers can include Huffman-encoded data which is significantly more expensive for the receiver to decode than for an attacker to send.\n\nCVE-2024-28182 for nghttp2: nghttp2 library keeps reading the unbounded number of HTTP/2 CONTINUATION frames even after a stream is reset to keep HPACK context in sync. This causes excessive CPU usage to decode HPACK stream.\n\nCVE-2024-27983 for Node.js: An attacker can make the Node.js HTTP/2 server completely unavailable by sending a small amount of HTTP/2 frames packets with a few HTTP/2 frames inside. It is possible to leave some data in nghttp2 memory after reset when headers with HTTP/2 CONTINUATION frame are sent to the server and then a TCP connection is abruptly closed by the client triggering the Http2Session destructor while header frames are still being processed (and stored in memory) causing a race condition.\n\nCVE-2024-3302 for Firefox: There was no limit to the number of HTTP/2 CONTINUATION frames that would be processed. A server could abuse this to create an Out of Memory condition in the browser.",
+    "severity": "High",
+    "cvss_score": 8.2,
+    "cvss_vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+    "affected_products": [
+      "FortiAuthenticator 6.6",
+      "FortiAuthenticator 6.5",
+      "FortiAuthenticator 6.4",
+      "FortiAuthenticator 6.3",
+      "FortiAuthenticator 6.2",
+      "FortiAuthenticator 6.1",
+      "FortiSandbox 5.0",
+      "FortiSandbox 4.4",
+      "FortiSandbox 4.0",
+      "FortiSandbox 3.2",
+      "FortiSwitch 7.6",
+      "FortiSwitch 7.4",
+      "FortiSwitch 7.2",
+      "FortiSwitch 7.0",
+      "FortiSwitch 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2024-05-14T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-24-120",
+    "kev_status": false,
+    "epss_score": 0.00766,
+    "cwe_ids": [
+      "CWE-362"
+    ],
+    "attack_vector": "",
+    "remediation": "",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "software",
+        "product": "Apache Tomcat"
+      },
+      {
+        "category": "languages",
+        "product": "Node.js"
+      },
+      {
+        "category": "browsers",
+        "product": "Firefox"
+      }
+    ],
+    "relevance_score": 45,
+    "epss_percentile": 0.52715,
+    "description_nvd": "An attacker can make the Node.js HTTP/2 server completely unavailable by sending a small amount of HTTP/2 frames packets with a few HTTP/2 frames inside. It is possible to leave some data in nghttp2 memory after reset when headers with HTTP/2 CONTINUATION frame are sent to the server and then a TCP connection is abruptly closed by the client triggering the Http2Session destructor while header frames are still being processed (and stored in memory) causing a race condition.",
+    "nvd_published": "2024-04-09T01:15:49.197",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-27983"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-55040",
+      "CVE-2026-45659",
+      "CVE-2026-56164",
+      "CVE-2026-58644",
+      "CVE-2026-50522"
+    ],
+    "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+    "description": "Threat actors have begun to exploit a newly disclosed Microsoft SharePoint vulnerability following the release of a proof-of-concept (PoC) code.",
+    "severity": "Critical",
+    "cvss_score": 9.1,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-13T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+    "kev_status": true,
+    "epss_score": 0.76981,
+    "cwe_ids": [
+      "CWE-1390"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "tags": [
+      "Application Security",
+      "Authentication Security",
+      "Cyber Attack",
+      "enterprise security",
+      "Identity Security",
+      "Microsoft",
+      "Patch Management",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "software",
+        "product": "Microsoft SharePoint"
+      }
+    ],
+    "relevance_score": 25,
+    "epss_percentile": 0.99511,
+    "description_nvd": "Weak authentication in Microsoft Office SharePoint allows an unauthorized attacker to bypass a security feature over a network.",
+    "nvd_published": "2026-07-14T18:18:15.413",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55040"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-19478",
+      "CVE-2026-19650"
+    ],
+    "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+    "description": "A newly disclosed security flaw in GitLab has come under active exploitation within days of public disclosure, according to watchTowr.",
+    "severity": "Critical",
+    "cvss_score": 9.4,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-21T00:00:00.000Z",
+    "source": "TheHackerNews, TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
+    "kev_status": false,
+    "epss_score": 0.0024,
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "attack_vector": "",
+    "remediation": "",
+    "tags": [
+      "API Security",
+      "Application Security",
+      "Code Injection",
+      "DevSecOps",
+      "enterprise security",
+      "Software Security",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "software",
+        "product": "GitLab"
+      }
+    ],
+    "relevance_score": 25,
+    "epss_percentile": 0.15352,
+    "description_nvd": "GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.2 before 18.11.11, 19.0 before 19.0.8, 19.1 before 19.1.6, and 19.2 before 19.2.4 that under certain conditions could allow an unauthenticated user to remotely modify or delete public projects and user data via a GraphQL directive.",
+    "nvd_published": "2026-08-17T20:16:41.777",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-19478"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-66147",
+      "CVE-2026-26035",
+      "CVE-2026-68820",
+      "CVE-2026-53414",
+      "CVE-2026-18412",
+      "CVE-2026-71398",
+      "CVE-2026-20348",
+      "CVE-2026-20337",
+      "CVE-2026-70465",
+      "CVE-2026-43637",
+      "CVE-2026-20339",
+      "CVE-2026-66145",
+      "CVE-2026-53415",
+      "CVE-2026-20345",
+      "CVE-2026-65640",
+      "CVE-2026-53413",
+      "CVE-2026-59309",
+      "CVE-2026-65321",
+      "CVE-2026-20338",
+      "CVE-2026-63720",
+      "CVE-2026-27302",
+      "CVE-2026-59310",
+      "CVE-2026-20349",
+      "CVE-2026-20346",
+      "CVE-2026-58231",
+      "CVE-2026-70468",
+      "CVE-2026-6726",
+      "CVE-2026-65400",
+      "CVE-2026-6727",
+      "CVE-2026-48362",
+      "CVE-2026-20347"
+    ],
+    "title": "Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware",
+    "description": "Cybersecurity researchers have attributed the exploitation of a newly patched security flaw in Broadcom VMware vCenter to a suspected China-nexus advanced persistent threat (APT).",
+    "severity": "Critical",
+    "cvss_score": 9.4,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:H",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-17T00:00:00.000Z",
+    "source": "TheHackerNews, TheHackerNews, TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
+    "kev_status": true,
+    "epss_score": 0.00327,
+    "cwe_ids": [
+      "CWE-94"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "tags": [
+      "Advanced Persistent Threat",
+      "Cyber Attack",
+      "enterprise security",
+      "Identity Security",
+      "ransomware",
+      "server security",
+      "Threat Intelligence",
+      "Virtualization",
+      "VMware",
+      "Vulnerability"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "virtualization",
+        "product": "VMware vCenter"
+      }
+    ],
+    "relevance_score": 25,
+    "epss_percentile": 0.25757,
+    "description_nvd": "An unauthenticated command injection vulnerability was identified in the GMS Dispatcher Service in GMS 9.5.1 and earlier versions which allows remote attacker to perform remote code execution through specially crafted requests.",
+    "nvd_published": "2026-08-11T21:17:49.173",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-66147"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-33634"
+    ],
+    "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+    "description": "Two malicious LiteLLM releases sat on PyPI for about 40 minutes in March carrying credential-stealing code capable of harvesting cloud keys, SSH keys, Kubernetes tokens, database passwords, and other secrets from systems that installed them.",
+    "severity": "High",
+    "cvss_score": 8.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-12T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
+    "kev_status": true,
+    "epss_score": 0.59164,
+    "cwe_ids": [
+      "CWE-506"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "tags": [
+      "AI Security",
+      "CI/CD Security",
+      "Cloud security",
+      "Credential Theft",
+      "Kubernetes Security",
+      "Malware",
+      "Open Source Security",
+      "Python Security",
+      "Software Supply Chain",
+      "Vulnerability"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "software",
+        "product": "Kubernetes"
+      }
+    ],
+    "relevance_score": 25,
+    "epss_percentile": 0.9904,
+    "description_nvd": "Trivy is a security scanner. On March 19, 2026, a threat actor used compromised credentials to publish a malicious Trivy v0.69.4 release, force-push 76 of 77 version tags in `aquasecurity/trivy-action` to credential-stealing malware, and replace all 7 tags in `aquasecurity/setup-trivy` with malicious commits. This incident is a continuation of the supply chain attack that began in late February 2026. Following the initial disclosure on March 1, credential rotation was performed but was not atomic (not all credentials were revoked simultaneously). The attacker could have use a valid token to exfiltrate newly rotated secrets during the rotation window (which lasted a few days). This could have allowed the attacker to retain access and execute the March 19 attack. Affected components include the `aquasecurity/trivy` Go / Container image version 0.69.4, the `aquasecurity/trivy-action` GitHub Action versions 0.0.1 \u2013 0.34.2 (76/77), and the`aquasecurity/setup-trivy` GitHub Action versions 0.2.0 \u2013 0.2.6, prior to the recreation of 0.2.6 with a safe commit. Known safe versions include versions 0.69.2 and 0.69.3 of the Trivy binary, version 0.35.0 of trivy-action, and version 0.2.6 of setup-trivy. Additionally, take other mitigations to ensure the safety of secrets. If there is any possibility that a compromised version ran in one's environment, all secrets accessible to affected pipelines must be treated as exposed and rotated immediately. Check whether one's organization pulled or executed Trivy v0.69.4 from any source. Remove any affected artifacts immediately. Review all workflows using `aquasecurity/trivy-action` or `aquasecurity/setup-trivy`. Those who referenced a version tag rather than a full commit SHA should check workflow run logs from March 19\u201320, 2026 for signs of compromise. Look for repositories named `tpcp-docs` in one's GitHub organization. The presence of such a repository may indicate that the fallback exfiltration mechanism was triggered and secrets were successfully stolen. Pin GitHub Actions to full, immutable commit SHA hashes, don't use mutable version tags.",
+    "nvd_published": "2026-03-23T22:16:31.290",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33634"
+  },
+  {
+    "cve_ids": [
+      "CVE-2025-22252"
+    ],
+    "title": "TACACS+ authentication bypass",
+    "description": "A missing authentication for critical function vulnerability [CWE-306] in FortiOS, FortiProxy, and FortiSwitchManager TACACS+ configured to use a remote TACACS+ server for authentication, that has itself been configured to use ASCII authentication may allow an attacker with knowledge of an existing admin account to access the device as a valid admin via an authentication bypass.",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiProxy 7.6",
+      "FortiProxy 7.4",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0",
+      "FortiProxy 2.0",
+      "FortiSwitchManager 7.2",
+      "FortiSwitchManager 7.0"
+    ],
+    "affected_versions": [],
+    "published_date": "2025-05-13T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-24-472",
+    "kev_status": false,
+    "epss_score": 0.00894,
+    "cwe_ids": [
+      "CWE-306"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-24-472",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.56761,
+    "description_nvd": "A missing authentication for critical function in Fortinet FortiProxy versions 7.6.0 through 7.6.1, FortiSwitchManager version 7.2.5, and FortiOS versions 7.4.4 through 7.4.6 and version 7.6.0 may allow an attacker with knowledge of an existing admin account to access the device as a valid admin via an authentication bypass.",
+    "nvd_published": "2025-05-28T08:15:21.070",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-22252"
+  },
+  {
+    "cve_ids": [
+      "CVE-2024-55591",
+      "CVE-2025-24472"
+    ],
+    "title": "Authentication bypass in Node.js websocket module and CSF requests",
+    "description": "An Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS and FortiProxy may allow a remote attacker to gain super-admin privileges via crafted requests to Node.js websocket module or via crafted CSF proxy requests.\n\nPlease note that reports show this is being exploited in the wild.",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiProxy 7.6",
+      "FortiProxy 7.4",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0",
+      "FortiProxy 2.0"
+    ],
+    "affected_versions": [],
+    "published_date": "2025-01-14T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-24-535",
+    "kev_status": true,
+    "epss_score": 0.03579,
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply mitigations per vendor instructions or discontinue use of the product if mitigations are unavailable.",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Node.js"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.88475,
+    "description_nvd": "An\u00a0Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
+    "nvd_published": "2025-01-14T14:15:34.450",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-12569",
+      "CVE-2021-27101",
+      "CVE-2023-34362"
+    ],
+    "title": "Clop-Linked Windchill Web Shell Decrypts Credentials and Maps Engineering Data",
+    "description": "A JavaServer Pages (JSP) web shell deployed following the exploitation of a critical security flaw in PTC Windchill and FlexPLM servers is specifically designed for the enterprise Product Lifecycle Management (PLM) software, according to new findings from ReliaQuest. S \u00e2\u20ac\u201d Returns Windchill credentials in plaintext E \u00e2\u20ac\u201d Returns the parameter value directly, likely used to test connectivity O \u00e2\u20ac\u201d Returns the operating system name J \u00e2\u20ac\u201d Loads and executes a Java class from a ZIP via the class loader D \u00e2\u20ac\u201d Runs the file download function S \u00e2\u20ac\u201d Runs the credential harvesting function L \u00e2\u20ac\u201d Runs the file vault enumeration and writes \"flst.txt\" G \u00e2\u20ac\u201d Reads an arbitrary file from the file system R \u00e2\u20ac\u201d Deletes a file; used for cleanup",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-19T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/clop-linked-windchill-web-shell.html",
+    "kev_status": true,
+    "epss_score": 0.99934,
+    "cwe_ids": [
+      "CWE-20",
+      "CWE-502"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply mitigations in accordance with vendor instructions, ensuring compliance with CISA\u2019s BOD 26-04 Prioritizing Security Updates Based on Risk (see URL in Notes) guidance and CISA\u2019s \u201cForensics Triage Requirements\u201d (see URL in Notes). Follow applicable BOD 26-04 guidance for cloud services or discontinue use of the product if mitigations are unavailable. Stakeholders are responsible for evaluating each asset's internet exposure and ensuring adherence to BOD 26-04 patching guidelines.",
+    "tags": [
+      "Application Security",
+      "Credential Theft",
+      "Cyber Attack",
+      "data theft",
+      "enterprise security",
+      "Malware",
+      "network security",
+      "ransomware",
+      "Vulnerability",
+      "Web Shell"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Java"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.9997,
+    "description_nvd": "A critical remote code execution (RCE) vulnerability has been reported in PTC Windchill PDMlink and PTC FlexPLM. The vulnerability may be exploited through the deserialization of untrusted data.\u00a0  *  This advisory also applies to all CPS versions\n  *  The identified vulnerability also impacts Windchill and FlexPLM releases prior to 11.0 M030",
+    "nvd_published": "2026-06-18T01:18:12.040",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-12569"
+  },
+  {
+    "cve_ids": [],
+    "title": "Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE",
+    "description": "Cybersecurity researchers have disclosed a critical security flaw in isolated-vm , a popular open-source sandbox with more than 2,900 stars and 190 forks on GitHub, that could allow attackers to escape the confines of the isolated environment.",
+    "severity": "Critical",
+    "cvss_score": null,
+    "cvss_vector": "",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-20T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html",
+    "kev_status": false,
+    "epss_score": null,
+    "cwe_ids": [],
+    "attack_vector": "",
+    "remediation": "",
+    "tags": [
+      "Application Security",
+      "Developer Security",
+      "JavaScript",
+      "Open Source",
+      "remote code execution",
+      "Sandbox Security",
+      "Vulnerability"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Java"
+      }
+    ],
+    "relevance_score": 10
+  },
+  {
+    "cve_ids": [
+      "CVE-2024-33506"
+    ],
+    "title": "Priviledged admin able to view device summary for device in different ADOM",
+    "description": "An exposure of sensitive information to an unauthorized actor vulnerability [CWE-200] in FortiManager Administrative Domain (ADOM) may allow a remote authenticated attacker assigned to an ADOM to access device summary of other ADOMs via crafted HTTP requests.",
+    "severity": "Low",
+    "cvss_score": 3.3,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+    "affected_products": [
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager 7.0",
+      "FortiManager 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2024-10-08T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-23-472",
+    "kev_status": false,
+    "epss_score": 0.00446,
+    "cwe_ids": [
+      "CWE-200"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-23-472",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.37345,
+    "description_nvd": "An exposure of sensitive information to an unauthorized actor vulnerability [CWE-200] in FortiManager 7.4.2 and below, 7.2.5 and below, 7.0.12 and below allows a remote authenticated attacker assigned to an Administrative Domain (ADOM) to access device summary of unauthorized ADOMs via crafted HTTP requests.",
+    "nvd_published": "2024-10-08T15:15:14.717",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-33506"
+  },
+  {
+    "cve_ids": [
+      "CVE-2024-45328"
+    ],
+    "title": "Incorrect authorization in GUI console",
+    "description": "An incorrect authorization vulnerability [CWE-863] in FortiSandbox may allow a low priviledged administrator to execute elevated CLI commands via the GUI console menu.",
+    "severity": "High",
+    "cvss_score": 7.8,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiSandbox 5.0",
+      "FortiSandbox 4.4",
+      "FortiSandbox 4.2",
+      "FortiSandbox 4.0"
+    ],
+    "affected_versions": [],
+    "published_date": "2025-03-11T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-24-261",
+    "kev_status": false,
+    "epss_score": 0.00142,
+    "cwe_ids": [
+      "CWE-863"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-24-261",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.04049,
+    "description_nvd": "An incorrect authorization vulnerability [CWE-863] in FortiSandbox 4.4.0 through 4.4.6 may allow a low priviledged administrator to execute elevated CLI commands via the GUI console menu.",
+    "nvd_published": "2025-03-11T15:15:41.963",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-45328"
+  },
+  {
+    "cve_ids": [
+      "CVE-2025-62439"
+    ],
+    "title": "Firewall policy bypass in FSSO Terminal Services Agent",
+    "description": "An Improper Verification of Source of a Communication Channel vulnerability [CWE-940] in FortiOS FSSO Terminal Services Agent may allow an authenticated user with knowledge of FSSO policy configurations to gain unauthorized access to protected network resources via crafted requests.",
+    "severity": "Medium",
+    "cvss_score": 4.2,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:L/A:N",
+    "affected_products": [
+      "FortiOS 8.0",
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2026-02-10T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-25-384",
+    "kev_status": false,
+    "epss_score": 0.00138,
+    "cwe_ids": [
+      "CWE-940"
+    ],
+    "attack_vector": "",
+    "remediation": "",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.03657,
+    "description_nvd": "An Improper Verification of Source of a Communication Channel vulnerability [CWE-940] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.4, FortiOS 7.4.0 through 7.4.9, FortiOS 7.2 all versions, FortiOS 7.0 all versions may allow an authenticated user with knowledge of FSSO policy configurations to gain unauthorized access to protected network resources via crafted requests.",
+    "nvd_published": "2026-02-10T16:16:09.080",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62439"
+  },
+  {
+    "cve_ids": [
+      "CVE-2022-42475"
+    ],
+    "title": "Heap-based buffer overflow in sslvpnd",
+    "description": "A heap-based buffer overflow vulnerability [CWE-122] in FortiOS SSL-VPN may allow a remote unauthenticated attacker to execute arbitrary code or commands via specifically crafted requests.\n\nFortinet is aware of an instance where this vulnerability was exploited in the wild, and recommends immediately validating your systems against the following indicators of compromise:\n\nMultiple log entries with:\n\nLogdesc=Application crashed and msg=[...] application:sslvpnd,[...], Signal 11 received, Backtrace: [...]\n\nPresence of the following artifacts in the filesystem:\n\n/data/lib/libips.bak /data/lib/libgif.so /data/lib/libiptcp.so /data/lib/libipudp.so /data/lib/libjepg.so /var/.sslvpnconfigbk /data/etc/wxd.conf /flash\n\nConnections to suspicious IP addresses from the FortiGate:\n\n188.34.130.40:444 103.131.189.143:30080,30081,30443,20443 193.36.119.61:8443,444 172.247.168.153:8033 139.180.184.197 66.42.91.32 158.247.221.101 107.148.27.117 139.180.128.142 155.138.224.122 185.174.136.20\n\nFor more information on how to check for the presence of the indicators of compromise above, please visit this Knowledge Base entry , and contact customer support for assistance.\n\nDisable SSL-VPN.\n\n2022-12-12: Added FOS6k/k 2022-12-22: Added FortiProxy 2022-12-27: Corrected typo in IOCs: 192.36.119.61 => 193.36.119.61",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiOS 6.2",
+      "FortiOS 6.0",
+      "FortiOS 5.6",
+      "FortiOS 5.4",
+      "FortiOS 5.2",
+      "FortiOS 5.0",
+      "FortiOS-6K7K 7.0",
+      "FortiOS-6K7K 6.4",
+      "FortiOS-6K7K 6.2",
+      "FortiOS-6K7K 6.0",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0",
+      "FortiProxy 2.0",
+      "FortiProxy 1.2",
+      "FortiProxy 1.1",
+      "FortiProxy 1.0"
+    ],
+    "affected_versions": [],
+    "published_date": "2022-12-12T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-22-398",
+    "kev_status": true,
+    "epss_score": 0.99474,
+    "cwe_ids": [
+      "CWE-197",
+      "CWE-787"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply updates per vendor instructions.",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.99941,
+    "description_nvd": "A heap-based buffer overflow vulnerability [CWE-122]\u00a0in FortiOS SSL-VPN 7.2.0 through 7.2.2, 7.0.0 through 7.0.8, 6.4.0 through 6.4.10, 6.2.0 through 6.2.11, 6.0.15 and earlier  and FortiProxy SSL-VPN 7.2.0 through 7.2.1, 7.0.7 and earlier may allow a remote unauthenticated attacker to execute arbitrary code or commands via specifically crafted requests.",
+    "nvd_published": "2023-01-02T09:15:09.490",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2022-42475"
+  },
+  {
+    "cve_ids": [
+      "CVE-2023-29183"
+    ],
+    "title": "Stored XSS in guest management page",
+    "description": "An improper neutralization of input during web page generation ('Cross-site Scripting') vulnerability [CWE-79] in FortiOS and FortiProxy GUI may allow an authenticated attacker to trigger malicious JavaScript code execution via crafted guest management setting.",
+    "severity": "High",
+    "cvss_score": 8.0,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiOS 6.2",
+      "FortiProxy 7.4",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0",
+      "FortiProxy 2.0",
+      "FortiProxy 1.2"
+    ],
+    "affected_versions": [],
+    "published_date": "2023-09-13T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-23-106",
+    "kev_status": false,
+    "epss_score": 0.01119,
+    "cwe_ids": [
+      "CWE-79"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.com/psirt/FG-IR-23-106",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Java"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.63606,
+    "description_nvd": "An improper neutralization of input during web page generation ('Cross-site Scripting') vulnerability [CWE-79] in FortiProxy 7.2.0 through 7.2.4, 7.0.0 through 7.0.10 and FortiOS 7.2.0 through 7.2.4, 7.0.0 through 7.0.11, 6.4.0 through 6.4.12, 6.2.0 through 6.2.14 GUI may allow an authenticated attacker to trigger malicious JavaScript code execution via crafted guest management setting.",
+    "nvd_published": "2023-09-13T13:15:08.367",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2023-29183"
+  },
+  {
+    "cve_ids": [
+      "CVE-2022-33980",
+      "CVE-2022-42889"
+    ],
+    "title": "Apache commons_text(CVE-2022-42889) and commons_configuration (CVE-2022-33980) vulnerability",
+    "description": "CVE-2022-42889:\n\nApache Commons Text performs variable interpolation, allowing properties to be dynamically evaluated and expanded. The standard format for interpolation is \"${prefix:name}\", where \"prefix\" is used to locate an instance of org.apache.commons.text.lookup.StringLookup that performs the interpolation. Starting with version 1.5 and continuing through 1.9, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers. These lookups are: - \"script\" - execute expressions using the JVM script execution engine (javax.script) - \"dns\" - resolve dns records - \"url\" - load values from urls, including from remote servers Applications using the interpolation defaults in the affected versions may be vulnerable to remote code execution or unintentional contact with remote servers if untrusted configuration values are used. Users are recommended to upgrade to Apache Commons Text 1.10.0, which disables the problematic interpolators by default.\n\nCVE-2022-33980:\n\nCVE-2022-42889: Apache Commons Configuration performs variable interpolation, allowing properties to be dynamically evaluated and expanded. The standard format for interpolation is \"${prefix:name}\", where \"prefix\" is used to locate an instance of org.apache.commons.configuration2.interpol.Lookup that performs the interpolation. Starting with version 2.4 and continuing through 2.7, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers. These lookups are: - \"script\" - execute expressions using the JVM script execution engine (javax.script) - \"dns\" - resolve dns records - \"url\" - load values from urls, including from remote servers Applications using the interpolation defaults in the affected versions may be vulnerable to remote code execution or unintentional contact with remote servers if untrusted configuration values are used. Users are recommended to upgrade to Apache Commons Configuration 2.8.0, which disables the problematic interpolators by default.",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2022-10-28T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-22-399",
+    "kev_status": false,
+    "epss_score": 0.99931,
+    "cwe_ids": [],
+    "attack_vector": "",
+    "remediation": "https://lists.apache.org/thread/tdf5n7j80lfxdhs2764vn0xmpfodm87s",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Java"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.99969,
+    "description_nvd": "Apache Commons Configuration performs variable interpolation, allowing properties to be dynamically evaluated and expanded. The standard format for interpolation is \"${prefix:name}\", where \"prefix\" is used to locate an instance of org.apache.commons.configuration2.interpol.Lookup that performs the interpolation. Starting with version 2.4 and continuing through 2.7, the set of default Lookup instances included interpolators that could result in arbitrary code execution or contact with remote servers. These lookups are: - \"script\" - execute expressions using the JVM script execution engine (javax.script) - \"dns\" - resolve dns records - \"url\" - load values from urls, including from remote servers Applications using the interpolation defaults in the affected versions may be vulnerable to remote code execution or unintentional contact with remote servers if untrusted configuration values are used. Users are recommended to upgrade to Apache Commons Configuration 2.8.0, which disables the problematic interpolators by default.",
+    "nvd_published": "2022-07-06T13:15:09.533",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2022-33980"
+  },
+  {
+    "cve_ids": [
+      "CVE-2024-50568"
+    ],
+    "title": "Weak authentication in security fabric daemon",
+    "description": "A channel accessible by non-endpoint vulnerability [CWE-300] in FortiOS & FortiProxy may allow an unauthenticated attacker with the knowledge of device specific data to spoof the identity of a downstream device of the security fabric via crafted TCP requests.",
+    "severity": "Medium",
+    "cvss_score": 5.9,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+    "affected_products": [
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiProxy 7.6",
+      "FortiProxy 7.4",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0"
+    ],
+    "affected_versions": [],
+    "published_date": "2025-06-10T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-24-058",
+    "kev_status": false,
+    "epss_score": 0.00374,
+    "cwe_ids": [
+      "CWE-300"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-24-058",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.30791,
+    "description_nvd": "A channel accessible by non-endpoint vulnerability [CWE-300] in Fortinet FortiOS version 7.4.0 through 7.4.3, 7.2.0 through 7.2.7 and before 7.0.14 & FortiProxy version 7.4.0 through 7.4.3, 7.2.0 through 7.2.9 and before 7.0.16 allows an unauthenticated attacker with the knowledge of device specific data to spoof the identity of a downstream device of the security fabric via crafted TCP requests.",
+    "nvd_published": "2025-06-10T17:19:25.660",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-50568"
+  },
+  {
+    "cve_ids": [
+      "CVE-2025-59718",
+      "CVE-2025-59719"
+    ],
+    "title": "Multiple Fortinet Products' FortiCloud SSO Login Authentication Bypass",
+    "description": "An Improper Verification of Cryptographic Signature vulnerability [CWE-347] in FortiOS, FortiWeb, FortiProxy and FortiSwitchManager may allow an unauthenticated attacker to bypass the FortiCloud SSO login authentication via a crafted SAML message, if that feature is enabled on the device.\n\nPlease note that the FortiCloud SSO login feature is not enabled in default factory settings. However, when an administrator registers the device to FortiCare from the device's GUI, unless the administrator disables the toggle switch \"Allow administrative login using FortiCloud SSO\" in the registration page, FortiCloud SSO login is enabled upon registration.\n\nTo prevent being affected by this vulnerability on vulnerable versions, please turn off the FortiCloud login feature (if enabled) temporarily until upgrading to a non-affected version. To turn off FortiCloud login, go to System -> Settings -> Switch \"Allow administrative login using FortiCloud SSO\" to Off. Or type the following command in the CLI:\n\nconfig system global set admin-forticloud-sso-login disable end",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiProxy 7.6",
+      "FortiProxy 7.4",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0",
+      "FortiSwitchManager 7.2",
+      "FortiSwitchManager 7.0",
+      "FortiWeb 8.0",
+      "FortiWeb 7.6",
+      "FortiWeb 7.4",
+      "FortiWeb 7.2",
+      "FortiWeb 7.0",
+      "FortiWeb 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2025-12-09T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-25-647",
+    "kev_status": true,
+    "epss_score": 0.25048,
+    "cwe_ids": [
+      "CWE-347"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Go"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.97749,
+    "description_nvd": "A improper verification of cryptographic signature vulnerability in Fortinet FortiOS 7.6.0 through 7.6.3, FortiOS 7.4.0 through 7.4.8, FortiOS 7.2.0 through 7.2.11, FortiOS 7.0.0 through 7.0.17, FortiProxy 7.6.0 through 7.6.3, FortiProxy 7.4.0 through 7.4.10, FortiProxy 7.2.0 through 7.2.14, FortiProxy 7.0.0 through 7.0.21, FortiSwitchManager 7.2.0 through 7.2.6, FortiSwitchManager 7.0.0 through 7.0.5 allows an unauthenticated attacker to bypass the FortiCloud SSO login authentication via a crafted SAML response message.",
+    "nvd_published": "2025-12-09T18:15:54.983",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59718"
+  },
+  {
+    "cve_ids": [
+      "CVE-2024-21757"
+    ],
+    "title": "Priviledged admin able to modify super-admins password",
+    "description": "An unverified password change vulnerability [CWE-620] in FortiManager or FortiAnalyzer may allow a read-write user to modify admin passwords via the device configuration backup.",
+    "severity": "Medium",
+    "cvss_score": 6.1,
+    "cvss_vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+    "affected_products": [
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer 7.0",
+      "FortiAnalyzer 6.4",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager 7.0",
+      "FortiManager 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2024-08-13T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-23-467",
+    "kev_status": false,
+    "epss_score": 0.00191,
+    "cwe_ids": [
+      "CWE-620"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-23-467",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.0917,
+    "description_nvd": "A unverified password change in Fortinet FortiManager versions 7.0.0 through 7.0.10, versions 7.2.0 through 7.2.4, and versions 7.4.0 through 7.4.1, as well as Fortinet FortiAnalyzer versions 7.0.0 through 7.0.10, versions 7.2.0 through 7.2.4, and versions 7.4.0 through 7.4.1, allows an attacker to modify admin passwords via the device configuration backup.",
+    "nvd_published": "2024-08-13T16:15:08.637",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21757"
+  },
+  {
+    "cve_ids": [
+      "CVE-2025-22254"
+    ],
+    "title": "Privilege escalation in GUI websocket module",
+    "description": "An Improper Privilege Management vulnerability [CWE-269] affecting FortiOS, FortiProxy & FortiWeb may allow an authenticated attacker with at least read-only admin permissions to gain super-admin privileges via crafted requests to Node.js websocket module.",
+    "severity": "Medium",
+    "cvss_score": 6.6,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiOS 7.6",
+      "FortiOS 7.4",
+      "FortiOS 7.2",
+      "FortiOS 7.0",
+      "FortiOS 6.4",
+      "FortiProxy 7.6",
+      "FortiProxy 7.4",
+      "FortiProxy 7.2",
+      "FortiProxy 7.0",
+      "FortiWeb 7.6",
+      "FortiWeb 7.4",
+      "FortiWeb 7.2",
+      "FortiWeb 7.0",
+      "FortiWeb 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2025-06-10T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-25-006",
+    "kev_status": false,
+    "epss_score": 0.00712,
+    "cwe_ids": [
+      "CWE-269"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-25-006",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "languages",
+        "product": "Node.js"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.50853,
+    "description_nvd": "An Improper Privilege Management vulnerability [CWE-269] vulnerability in Fortinet FortiOS 7.6.0 through 7.6.1, FortiOS 7.4.0 through 7.4.6, FortiOS 7.2.0 through 7.2.10, FortiOS 7.0.0 through 7.0.16, FortiOS 6.4.0 through 6.4.15, FortiProxy 7.6.0 through 7.6.1, FortiProxy 7.4.0 through 7.4.7, FortiWeb 7.6.0 through 7.6.1, FortiWeb 7.4.0 through 7.4.6 allows an authenticated attacker with at least read-only admin permissions to gain super-admin privileges via crafted requests to\u00a0Node.js websocket module.",
+    "nvd_published": "2025-06-10T17:21:08.420",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2025-22254"
+  },
+  {
+    "cve_ids": [
+      "CVE-2026-22572"
+    ],
+    "title": "MFA Bypass in GUI",
+    "description": "An authentication bypass using an alternate path or channel vulnerability [CWE-288] in FortiManager and FortiAnalyzer multifactor authentication may allow an attacker with knowledge of the admins password to bypass multifactor authentication checks via submitting multiple crafted requests.",
+    "severity": "High",
+    "cvss_score": 7.2,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [
+      "FortiAnalyzer 7.6",
+      "FortiAnalyzer 7.4",
+      "FortiAnalyzer 7.2",
+      "FortiAnalyzer 6.4",
+      "FortiManager 7.6",
+      "FortiManager 7.4",
+      "FortiManager 7.2",
+      "FortiManager 6.4"
+    ],
+    "affected_versions": [],
+    "published_date": "2026-03-10T00:00:00.000Z",
+    "source": "Fortinet PSIRT",
+    "source_url": "https://www.fortiguard.com/psirt/FG-IR-26-090",
+    "kev_status": false,
+    "epss_score": 0.00562,
+    "cwe_ids": [
+      "CWE-288"
+    ],
+    "attack_vector": "",
+    "remediation": "https://fortiguard.fortinet.com/psirt/FG-IR-26-090",
+    "tags": [],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.44323,
+    "description_nvd": "An authentication bypass using an alternate path or channel vulnerability in Fortinet FortiAnalyzer 7.6.0 through 7.6.3, FortiAnalyzer 7.4.0 through 7.4.7, FortiAnalyzer 7.2.2 through 7.2.11, FortiManager 7.6.0 through 7.6.3, FortiManager 7.4.0 through 7.4.7, FortiManager 7.2.2 through 7.2.11 may allow  an attacker with knowledge of the admins password to bypass multifactor authentication checks via submitting multiple crafted requests.",
+    "nvd_published": "2026-03-10T18:18:12.250",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22572"
+  },
+  {
+    "cve_ids": [
+      "CVE-2021-36260",
+      "CVE-2022-26134",
+      "CVE-2022-29464",
+      "CVE-2022-30525",
+      "CVE-2023-1389",
+      "CVE-2024-4577",
+      "CVE-2024-10914",
+      "CVE-2025-1974"
+    ],
+    "title": "Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies",
+    "description": "Cybersecurity researchers have flagged a previously undocumented Linux botnet family dubbed Evooo1Bot that derives its core functionality from the Mirai botnet source code and is equipped to turn internet-facing devices into SOCKS proxies.",
+    "severity": "Critical",
+    "cvss_score": 9.8,
+    "cvss_vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+    "affected_products": [],
+    "affected_versions": [],
+    "published_date": "2026-08-17T00:00:00.000Z",
+    "source": "TheHackerNews",
+    "source_url": "https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html",
+    "kev_status": true,
+    "epss_score": 0.99525,
+    "cwe_ids": [
+      "CWE-78"
+    ],
+    "attack_vector": "",
+    "remediation": "Apply updates per vendor instructions.",
+    "tags": [
+      "botnet",
+      "Credential Theft",
+      "ddos",
+      "iot security",
+      "Linux security",
+      "Malware",
+      "network security",
+      "router security",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "scraped_at": "2026-08-21T14:03:04.371055",
+    "affected_tech": [
+      {
+        "category": "browsers",
+        "product": "Edge"
+      }
+    ],
+    "relevance_score": 10,
+    "epss_percentile": 0.99943,
+    "description_nvd": "A command injection vulnerability in the web server of some Hikvision product. Due to the insufficient input validation, attacker can exploit the vulnerability to launch a command injection attack by sending some messages with malicious commands.",
+    "nvd_published": "2021-09-22T13:15:07.690",
+    "nvd_url": "https://nvd.nist.gov/vuln/detail/CVE-2021-36260"
+  }
+]

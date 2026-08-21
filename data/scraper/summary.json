@@ -1,0 +1,33 @@
+{
+  "total_threats": 23,
+  "severity_breakdown": {
+    "Critical": 12,
+    "High": 5,
+    "Medium": 5,
+    "Low": 1
+  },
+  "kev_count": 8,
+  "products_affected": [
+    "Edge",
+    "VMware vCenter",
+    "GitLab",
+    "Java",
+    "Apache Tomcat",
+    "Kubernetes",
+    "Hyper-V",
+    "Node.js",
+    "Chrome",
+    "Microsoft SharePoint",
+    "Go",
+    "Nginx",
+    "Ruby",
+    "Firefox"
+  ],
+  "sources": [
+    "TheHackerNews, TheHackerNews",
+    "TheHackerNews, TheHackerNews, TheHackerNews",
+    "TheHackerNews",
+    "Fortinet PSIRT"
+  ],
+  "generated_at": "2026-08-21T14:04:52.883036"
+}

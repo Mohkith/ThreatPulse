@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreatPulse - Threat Intelligence Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0e17; color: #e0e0e0; }
+
+        .header { background: linear-gradient(135deg, #0d1321, #1a1f35); padding: 20px 40px; border-bottom: 1px solid #1e293b; }
+        .header h1 { font-size: 24px; color: #60a5fa; }
+        .header .subtitle { color: #94a3b8; font-size: 13px; margin-top: 4px; }
+        .header .company { color: #34d399; font-weight: 600; }
+
+        .stats-row { display: flex; gap: 16px; padding: 20px 40px; flex-wrap: wrap; }
+        .stat-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 16px 24px; min-width: 160px; }
+        .stat-card .label { color: #94a3b8; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
+        .stat-card .value { font-size: 32px; font-weight: 700; margin-top: 4px; }
+        .stat-card.critical .value { color: #ef4444; }
+        .stat-card.high .value { color: #f97316; }
+        .stat-card.medium .value { color: #eab308; }
+        .stat-card.kev .value { color: #a855f7; }
+        .stat-card.total .value { color: #60a5fa; }
+
+        .content { padding: 0 40px 40px; }
+        .section-title { font-size: 16px; color: #94a3b8; margin: 24px 0 12px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .threat-list { display: flex; flex-direction: column; gap: 12px; }
+        .threat-card { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 16px 20px; transition: border-color 0.2s; }
+        .threat-card:hover { border-color: #3b82f6; }
+        .threat-card.severity-Critical { border-left: 4px solid #ef4444; }
+        .threat-card.severity-High { border-left: 4px solid #f97316; }
+        .threat-card.severity-Medium { border-left: 4px solid #eab308; }
+        .threat-card.severity-Low { border-left: 4px solid #22c55e; }
+        .threat-card.severity-unknown { border-left: 4px solid #6b7280; }
+
+        .threat-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+        .threat-title { font-size: 15px; font-weight: 600; color: #f1f5f9; }
+        .threat-title a { color: #60a5fa; text-decoration: none; }
+        .threat-title a:hover { text-decoration: underline; }
+
+        .badges { display: flex; gap: 6px; flex-shrink: 0; flex-wrap: wrap; }
+        .badge { padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+        .badge-critical { background: #7f1d1d; color: #fca5a5; }
+        .badge-high { background: #7c2d12; color: #fed7aa; }
+        .badge-medium { background: #713f12; color: #fef08a; }
+        .badge-low { background: #14532d; color: #bbf7d0; }
+        .badge-kev { background: #581c87; color: #d8b4fe; }
+        .badge-cvss { background: #1e3a5f; color: #93c5fd; }
+        .badge-source { background: #1e293b; color: #94a3b8; }
+
+        .threat-meta { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; font-size: 12px; color: #64748b; }
+        .threat-desc { margin-top: 10px; font-size: 13px; color: #94a3b8; line-height: 1.5; }
+        .threat-products { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+        .product-tag { background: #1e3a5f; color: #93c5fd; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+        .tech-tag { background: #064e3b; color: #6ee7b7; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+
+        .tech-stack-bar { background: #111827; border: 1px solid #1e293b; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; }
+        .tech-stack-bar h3 { color: #94a3b8; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .tech-categories { display: flex; gap: 16px; flex-wrap: wrap; }
+        .tech-category { }
+        .tech-category .cat-label { color: #64748b; font-size: 11px; margin-bottom: 4px; }
+        .tech-items { display: flex; gap: 4px; flex-wrap: wrap; }
+
+        .empty-state { text-align: center; padding: 60px; color: #64748b; }
+        .empty-state h2 { color: #94a3b8; margin-bottom: 8px; }
+
+        .footer { text-align: center; padding: 20px; color: #475569; font-size: 12px; border-top: 1px solid #1e293b; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ThreatPulse</h1>
+        <div class="subtitle">
+            Threat Intelligence Dashboard &mdash; Filtered by
+            <span class="company">{{ techstack.company if techstack else 'Your' }} Tech Stack</span>
+        </div>
+    </div>
+
+    <div class="stats-row">
+        {% if summary %}
+        <div class="stat-card total">
+            <div class="label">Relevant Threats</div>
+            <div class="value">{{ summary.total_threats }}</div>
+        </div>
+        <div class="stat-card critical">
+            <div class="label">Critical</div>
+            <div class="value">{{ summary.severity_breakdown.Critical }}</div>
+        </div>
+        <div class="stat-card high">
+            <div class="label">High</div>
+            <div class="value">{{ summary.severity_breakdown.High }}</div>
+        </div>
+        <div class="stat-card medium">
+            <div class="label">Medium</div>
+            <div class="value">{{ summary.severity_breakdown.Medium }}</div>
+        </div>
+        <div class="stat-card kev">
+            <div class="label">In CISA KEV</div>
+            <div class="value">{{ summary.kev_count }}</div>
+        </div>
+        {% else %}
+        <div class="stat-card total">
+            <div class="label">Status</div>
+            <div class="value" style="font-size:18px">No Data</div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="content">
+        {% if techstack %}
+        <div class="tech-stack-bar">
+            <h3>Monitored Tech Stack</h3>
+            <div class="tech-categories">
+                {% for category, items in techstack.items() %}
+                {% if items is iterable and items is not string and category not in ['company', 'last_updated'] %}
+                <div class="tech-category">
+                    <div class="cat-label">{{ category | replace('_', ' ') | title }}</div>
+                    <div class="tech-items">
+                        {% for item in items %}
+                        <span class="tech-tag">{{ item }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="section-title">Threats Affecting Your Stack</div>
+
+        {% if threats %}
+        <div class="threat-list">
+            {% for threat in threats %}
+            <div class="threat-card severity-{{ threat.severity if threat.severity else 'unknown' }}">
+                <div class="threat-header">
+                    <div class="threat-title">
+                        {% if threat.source_url %}
+                        <a href="{{ threat.source_url }}" target="_blank">{{ threat.title or (threat.description[:100] if threat.description else 'Untitled') }}</a>
+                        {% else %}
+                        {{ threat.title or (threat.description[:100] if threat.description else 'Untitled') }}
+                        {% endif %}
+                    </div>
+                    <div class="badges">
+                        {% if threat.severity %}
+                        <span class="badge badge-{{ threat.severity | lower }}">{{ threat.severity }}</span>
+                        {% endif %}
+                        {% if threat.cvss_score %}
+                        <span class="badge badge-cvss">CVSS {{ threat.cvss_score }}</span>
+                        {% endif %}
+                        {% if threat.kev_status %}
+                        <span class="badge badge-kev">CISA KEV</span>
+                        {% endif %}
+                        <span class="badge badge-source">{{ threat.source }}</span>
+                    </div>
+                </div>
+                <div class="threat-meta">
+                    {% if threat.cve_ids %}
+                    <span>CVEs: {{ threat.cve_ids | join(', ') }}</span>
+                    {% endif %}
+                    {% if threat.published_date %}
+                    <span>Published: {{ threat.published_date[:10] if threat.published_date else '' }}</span>
+                    {% endif %}
+                    {% if threat.epss_score %}
+                    <span>EPSS: {{ "%.1f" | format(threat.epss_score | float * 100) }}%</span>
+                    {% endif %}
+                </div>
+                {% if threat.description %}
+                <div class="threat-desc">{{ threat.description[:300] }}{% if threat.description|length > 300 %}...{% endif %}</div>
+                {% endif %}
+                {% if threat.affected_products %}
+                <div class="threat-products">
+                    {% for product in threat.affected_products %}
+                    {% if product %}
+                    <span class="product-tag">{{ product }}</span>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if threat.affected_tech %}
+                <div class="threat-products" style="margin-top:4px">
+                    {% for tech in threat.affected_tech %}
+                    <span class="tech-tag">{{ tech.product }} ({{ tech.category | replace('_', ' ') }})</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% if threat.remediation %}
+                <div class="threat-meta" style="margin-top:6px">
+                    <span style="color:#34d399">Remediation: {{ threat.remediation[:200] if threat.remediation else '' }}</span>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <h2>No threats match your tech stack</h2>
+            <p>Run the pipeline to scrape and filter vulnerability data.</p>
+            <p style="margin-top:12px"><code>python pipeline/run_pipeline.py</code></p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="footer">
+        ThreatPulse &mdash; Built for Into the Scrape-Verse Hackathon (WeMakeDevs x Bright Data)
+    </div>
+</body>
+</html>

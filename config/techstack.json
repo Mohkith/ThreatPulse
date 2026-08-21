@@ -1,0 +1,55 @@
+{
+  "company": "Acme Corp",
+  "last_updated": "2026-08-19",
+  "operating_systems": [
+    "Windows Server 2022",
+    "Windows 11",
+    "Ubuntu 22.04",
+    "macOS Sonoma",
+    "RHEL 9"
+  ],
+  "network_equipment": [
+    "Fortinet FortiGate",
+    "Cisco Catalyst",
+    "Palo Alto PA-Series",
+    "Pulse Secure",
+    "Citrix Gateway"
+  ],
+  "cloud": [
+    "AWS",
+    "Azure",
+    "GCP"
+  ],
+  "virtualization": [
+    "VMware vCenter",
+    "VMware ESXi",
+    "Hyper-V",
+    "Proxmox"
+  ],
+  "software": [
+    "Microsoft SharePoint",
+    "Microsoft Exchange",
+    "GitLab",
+    "Jenkins",
+    "Apache Tomcat",
+    "Nginx",
+    "Docker",
+    "Kubernetes",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "Elasticsearch"
+  ],
+  "languages": [
+    "Python",
+    "Node.js",
+    "Java",
+    "Go",
+    "Ruby"
+  ],
+  "browsers": [
+    "Chrome",
+    "Edge",
+    "Firefox"
+  ]
+}

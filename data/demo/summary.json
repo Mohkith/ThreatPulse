@@ -1,0 +1,24 @@
+{
+  "total_threats": 7,
+  "severity_breakdown": {
+    "Critical": 3,
+    "High": 4,
+    "Medium": 0,
+    "Low": 0
+  },
+  "kev_count": 1,
+  "products_affected": [
+    "Fortinet FortiGate",
+    "VMware vCenter",
+    "Cisco Catalyst",
+    "Microsoft Exchange",
+    "GitLab",
+    "Chrome"
+  ],
+  "sources": [
+    "TheHackerNews",
+    "Fortinet PSIRT",
+    "TheHackerNews, Fortinet PSIRT"
+  ],
+  "generated_at": "2026-08-20T16:25:31.629819"
+}

@@ -1,0 +1,58 @@
+{
+  "scrapers": [
+    {
+      "id": "thn_vulns",
+      "name": "THN Vulnerability Feed",
+      "type": "discovery",
+      "source": "thehackernews.com",
+      "url": "https://thehackernews.com/search/label/Vulnerability",
+      "collector_id": "c_mt1qqsek22fynhmqyp",
+      "schedule": "daily",
+      "fields": [
+        "title",
+        "url",
+        "date",
+        "tags",
+        "snippet"
+      ]
+    },
+    {
+      "id": "fortinet_psirt",
+      "name": "Fortinet PSIRT Advisories",
+      "type": "sitemap",
+      "source": "fortiguard.com",
+      "url": "https://fortiguard.com/psirt",
+      "collector_id": "c_mt1qt75t259j8dshdq",
+      "schedule": "daily",
+      "fields": [
+        "title",
+        "advisory_id",
+        "severity",
+        "date",
+        "affected_products",
+        "url"
+      ]
+    },
+    {
+      "id": "web_vuln_search",
+      "name": "Web Vulnerability Search",
+      "type": "search",
+      "source": "web-wide",
+      "query": "critical CVE exploited 2026",
+      "collector_id": "c_mt1r1osbrx7dx0835",
+      "schedule": "daily",
+      "fields": [
+        "title",
+        "url",
+        "snippet",
+        "source_domain"
+      ]
+    }
+  ],
+  "enrichment_apis": {
+    "nvd": "https://services.nvd.nist.gov/rest/json/cves/2.0",
+    "cisa_kev": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+    "epss": "https://api.first.org/data/v1/epss",
+    "github_advisory": "https://api.github.com/advisories"
+  }
+}

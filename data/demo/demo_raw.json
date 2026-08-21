@@ -1,0 +1,193 @@
+{
+  "thn_vulns": [
+    {
+      "title": "Lazarus Group Exploits Windows Zero-Day",
+      "description": "The North Korean threat actor Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows AFD.sys driver.",
+      "product_page_url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+      "published_date": "2026-08-12T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-68820",
+        "CVE-2025-49113"
+      ],
+      "cvss_score": "7.0",
+      "affected_products": "Microsoft Windows AFD.sys",
+      "category_tags": [
+        "Vulnerability",
+        "Threat Intelligence"
+      ]
+    },
+    {
+      "title": "Hackers Compromised 14,500 Dahua Cameras",
+      "description": "Researchers disclosed a campaign that compromised more than 14,530 Dahua devices using credential attacks and two authentication-bypass flaws.",
+      "product_page_url": "https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html",
+      "published_date": "2026-08-19T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2021-33044",
+        "CVE-2024-39943",
+        "CVE-2021-33045",
+        "CVE-2025-31702"
+      ],
+      "cvss_score": "9.8",
+      "affected_products": "Dahua cameras",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "title": "China-Nexus Actor Exploits VMware vCenter",
+      "description": "A suspected China-nexus APT exploited a newly patched critical security flaw in Broadcom VMware vCenter Server.",
+      "product_page_url": "https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html",
+      "published_date": "2026-08-17T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-59310",
+        "CVE-2026-59309"
+      ],
+      "cvss_score": "9.8",
+      "affected_products": "VMware vCenter Server",
+      "category_tags": [
+        "Vulnerability",
+        "Threat Intelligence"
+      ]
+    },
+    {
+      "title": "Critical Fortinet FortiGate RCE Vulnerability",
+      "description": "Fortinet disclosed a critical remote code execution vulnerability affecting FortiGate firewalls running FortiOS.",
+      "product_page_url": "https://thehackernews.com/2026/08/fortinet-fortigate-rce.html",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-45678"
+      ],
+      "cvss_score": "9.6",
+      "affected_products": "Fortinet FortiGate",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "title": "Apache Struts RCE Vulnerability Active Exploitation",
+      "description": "Attackers are actively exploiting a critical RCE vulnerability in Apache Struts 2 framework.",
+      "product_page_url": "https://thehackernews.com/2026/08/apache-struts-rce.html",
+      "published_date": "2026-08-16T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-55555"
+      ],
+      "cvss_score": "8.8",
+      "affected_products": "Apache Struts",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "title": "Microsoft Exchange Server Zero-Day Patched",
+      "description": "Microsoft patched an actively exploited zero-day in Exchange Server allowing authenticated RCE.",
+      "product_page_url": "https://thehackernews.com/2026/08/microsoft-exchange-zeroday.html",
+      "published_date": "2026-08-14T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-33333"
+      ],
+      "cvss_score": "8.1",
+      "affected_products": "Microsoft Exchange Server",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "title": "GitLab Critical Path Traversal Vulnerability",
+      "description": "GitLab disclosed a critical path traversal flaw allowing unauthenticated attackers to read arbitrary files.",
+      "product_page_url": "https://thehackernews.com/2026/08/gitlab-path-traversal.html",
+      "published_date": "2026-08-15T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-44444"
+      ],
+      "cvss_score": "9.1",
+      "affected_products": "GitLab",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "title": "Cisco Catalyst Switches DNS Spoofing Bug",
+      "description": "A vulnerability in Cisco Catalyst switches allows DNS spoofing on the management interface.",
+      "product_page_url": "https://thehackernews.com/2026/08/cisco-catalyst-dns.html",
+      "published_date": "2026-08-13T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-22222"
+      ],
+      "cvss_score": "7.5",
+      "affected_products": "Cisco Catalyst",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    },
+    {
+      "title": "Selenium Grid Exploited to Mine Cryptocurrency",
+      "description": "Attackers are exploiting exposed Selenium Grid instances to deploy cryptocurrency miners.",
+      "product_page_url": "https://thehackernews.com/2026/08/selenium-grid-crypto.html",
+      "published_date": "2026-08-11T00:00:00.000Z",
+      "cve_ids": [],
+      "affected_products": "Selenium Grid",
+      "category_tags": [
+        "Threat Intelligence"
+      ]
+    },
+    {
+      "title": "Chrome V8 Type Confusion Bug Under Active Exploitation",
+      "description": "Google patched a critical type confusion vulnerability in Chrome V8 engine that is being actively exploited in the wild.",
+      "product_page_url": "https://thehackernews.com/2026/08/chrome-v8-type-confusion.html",
+      "published_date": "2026-08-18T00:00:00.000Z",
+      "cve_ids": [
+        "CVE-2026-77777"
+      ],
+      "cvss_score": "8.8",
+      "affected_products": "Google Chrome",
+      "category_tags": [
+        "Vulnerability"
+      ]
+    }
+  ],
+  "fortinet_psirt": [
+    {
+      "title": "FG-IR-26-001: FortiOS Buffer Overflow",
+      "advisory_id": "FG-IR-26-001",
+      "severity": "Critical",
+      "date": "2026-08-10",
+      "affected_products": [
+        "FortiOS",
+        "FortiGate"
+      ],
+      "description": "A buffer overflow in FortiOS SSL VPN may allow remote code execution.",
+      "url": "https://fortiguard.com/psirt/FG-IR-26-001",
+      "cve_ids": [
+        "CVE-2026-11111"
+      ]
+    },
+    {
+      "title": "FG-IR-26-002: FortiManager Authentication Bypass",
+      "advisory_id": "FG-IR-26-002",
+      "severity": "High",
+      "date": "2026-08-12",
+      "affected_products": [
+        "FortiManager"
+      ],
+      "description": "An authentication bypass in FortiManager may allow unauthenticated access.",
+      "url": "https://fortiguard.com/psirt/FG-IR-26-002",
+      "cve_ids": [
+        "CVE-2026-22222"
+      ]
+    },
+    {
+      "title": "FG-IR-26-003: FortiProxy Denial of Service",
+      "advisory_id": "FG-IR-26-003",
+      "severity": "Medium",
+      "date": "2026-08-15",
+      "affected_products": [
+        "FortiProxy"
+      ],
+      "description": "A denial of service vulnerability in FortiProxy web proxy.",
+      "url": "https://fortiguard.com/psirt/FG-IR-26-003",
+      "cve_ids": [
+        "CVE-2026-33333"
+      ]
+    }
+  ]
+}

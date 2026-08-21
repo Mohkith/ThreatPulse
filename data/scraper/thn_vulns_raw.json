@@ -1,0 +1,988 @@
+[
+  {
+    "title": "SafePal Hardware Wallet Maker Says Flaw Exposed Data of Nearly 40,000 Customers",
+    "url": "https://thehackernews.com/2026/08/safepal-hardware-wallet-maker-says-flaw.html",
+    "date": "2026-08-18T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "cryptocurrency",
+      "Cybercrime",
+      "Data Exposure",
+      "Fraud",
+      "Phishing",
+      "Privacy",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "SafePal has disclosed that an authorization flaw in an order-tracking plug-in exposed the names, email addresses, shipping addresses, phone numbers, and purchase details of approximately 39,798 customers.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "New Cryptographic Context Injection Attack Could Let Web Pages Steal Grok Chat Data",
+    "url": "https://thehackernews.com/2026/08/new-cryptographic-context-injection.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "AI Security",
+      "Application Security",
+      "artificial intelligence",
+      "data exfiltration",
+      "data security",
+      "Privacy",
+      "Prompt Injection",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Adversa AI has disclosed an attack technique that it says can cause xAI's Grok chatbot to send a user's name, approximate location, subscription tier, and the prompts from the ongoing conversation to an attacker-controlled server after the user asks it to summarize an ordinary web page.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Isolated-vm Flaw Lets Sandboxed JavaScript Escape to Host for Potential RCE",
+    "url": "https://thehackernews.com/2026/08/isolated-vm-flaw-lets-sandboxed.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Developer Security",
+      "JavaScript",
+      "Open Source",
+      "remote code execution",
+      "Sandbox Security",
+      "Vulnerability"
+    ],
+    "snippet": "Cybersecurity researchers have disclosed a critical security flaw in isolated-vm , a popular open-source sandbox with more than 2,900 stars and 190 forks on GitHub, that could allow attackers to escape the confines of the isolated environment.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Critical NetScaler Flaw Can Bypass Authentication on Certain Gateway and AAA Servers",
+    "url": "https://thehackernews.com/2026/08/critical-netscaler-flaw-can-bypass.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "Citrix",
+      "enterprise security",
+      "network security",
+      "Remote Access Security",
+      "VPN Security",
+      "Vulnerability",
+      "Zero Trust Security"
+    ],
+    "snippet": "Citrix has released updates to address two security flaws impacting NetScaler ADC and NetScaler Gateway deployments, including a critical-severity authentication bypass vulnerability.",
+    "cve_ids": [
+      "CVE-2026-19489",
+      "CVE-2026-19490",
+      "CVE-2026-8451"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Zombie Card Attack Can Revive Expired Visa Cards for Contactless Payments",
+    "url": "https://thehackernews.com/2026/08/zombie-card-attack-can-revive-expired.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "banking security",
+      "Contactless Payment",
+      "cryptography",
+      "Financial Security",
+      "mobile security",
+      "NFC Security",
+      "Payment Security",
+      "Point-of-Sale Security",
+      "Vulnerability"
+    ],
+    "snippet": "Researchers at the University of Massachusetts Amherst have demonstrated an attack that revives expired Visa contactless credit cards for real in-store purchases by rewriting the expiration date a point-of-sale (POS) terminal reads over near-field communication (NFC), without breaking any of the card's cryptography.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Microsoft Copilot Personal Flaws Could Let One Click Exfiltrate Data From Connected Apps",
+    "url": "https://thehackernews.com/2026/08/microsoft-copilot-personal-flaws-could.html",
+    "date": "2026-08-18T00:00:00.000Z",
+    "tags": [
+      "AI Security",
+      "Application Security",
+      "Cloud security",
+      "data security",
+      "information disclosure",
+      "Microsoft",
+      "Privacy",
+      "Prompt Injection",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Varonis Threat Labs has disclosed three vulnerabilities in Microsoft Copilot Personal that it said could allow a single click on a crafted link to silently pull data from connected apps and other information available to the victim's Copilot session.",
+    "cve_ids": [
+      "CVE-2026-24301",
+      "CVE-2026-24299"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "AI-Generated Exploit Scripts Target Siemens S7 PLCs in U.S. Critical Infrastructure",
+    "url": "https://thehackernews.com/2026/08/ai-generated-exploit-scripts-target.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "artificial intelligence",
+      "critical infrastructure",
+      "Cyber Attack",
+      "Industrial Security",
+      "network security",
+      "Operational Technology",
+      "Vulnerability"
+    ],
+    "snippet": "The U.S. government on Wednesday warned of an \"active threat\" targeting critical infrastructure organizations in the country using artificial intelligence (AI)-generated exploit scripts.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Clop-Linked Windchill Web Shell Decrypts Credentials and Maps Engineering Data",
+    "url": "https://thehackernews.com/2026/08/clop-linked-windchill-web-shell.html",
+    "date": "2026-08-19T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Credential Theft",
+      "Cyber Attack",
+      "data theft",
+      "enterprise security",
+      "Malware",
+      "network security",
+      "ransomware",
+      "Vulnerability",
+      "Web Shell"
+    ],
+    "snippet": "A JavaServer Pages (JSP) web shell deployed following the exploitation of a critical security flaw in PTC Windchill and FlexPLM servers is specifically designed for the enterprise Product Lifecycle Management (PLM) software, according to new findings from ReliaQuest. S \u00e2\u20ac\u201d Returns Windchill credentials in plaintext E \u00e2\u20ac\u201d Returns the parameter value directly, likely used to test connectivity O \u00e2\u20ac\u201d Returns the operating system name J \u00e2\u20ac\u201d Loads and executes a Java class from a ZIP via the class loader D \u00e2\u20ac\u201d Runs the file download function S \u00e2\u20ac\u201d Runs the credential harvesting function L \u00e2\u20ac\u201d Runs the file vault enumeration and writes \"flst.txt\" G \u00e2\u20ac\u201d Reads an arbitrary file from the file system R \u00e2\u20ac\u201d Deletes a file; used for cleanup",
+    "cve_ids": [
+      "CVE-2026-12569",
+      "CVE-2021-27101",
+      "CVE-2023-34362"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Attackers Exploit Zimbra SNMP Flaw for Unauthenticated Remote Code Execution",
+    "url": "https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "Command Injection",
+      "email security",
+      "enterprise security",
+      "remote code execution",
+      "server security",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "A now-patched security flaw impacting Zimbra Collaboration (ZCS) has come under active exploitation in the wild, according to the Polish Computer Emergency Response Team (CERT Polska).",
+    "cve_ids": [
+      "CVE-2026-73570",
+      "CVE-2025-66376"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Cloudflare Workers Spectre Attack Leaks JWT From Co-Located Worker at 12 Bits/Second",
+    "url": "https://thehackernews.com/2026/08/cloudflare-workers-spectre-attack-leaks.html",
+    "date": "2026-08-19T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Cloud security",
+      "CloudFlare",
+      "Cybersecurity Research",
+      "data security",
+      "hardware security",
+      "Side-Channel Attack",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Cybersecurity researchers have disclosed details of a remote Spectre attack against Cloudflare Workers that leaked a JSON Web Token (JWT) from a co-located Worker in the production environment at up to 12 bits per second, 360 times the rate of an earlier attack demonstrated in 2021.",
+    "affected_products": [
+      "Cloudflare"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation",
+    "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+    "date": "2026-08-19T00:00:00.000Z",
+    "tags": [
+      "Apple",
+      "endpoint security",
+      "exploitation",
+      "Malware",
+      "Microsoft",
+      "Nation-State",
+      "network security",
+      "ransomware",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four critical vulnerabilities to its Known Exploited Vulnerabilities ( KEV ) catalog, stating they are being exploited in the wild.",
+    "cve_ids": [
+      "CVE-2026-33824"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Attackers Exploit MLflow SSRF Flaw to Steal Cloud Credentials and Secrets",
+    "url": "https://thehackernews.com/2026/08/attackers-exploit-mlflow-ssrf-flaw-to.html",
+    "date": "2026-08-18T00:00:00.000Z",
+    "tags": [
+      "artificial intelligence",
+      "Cloud security",
+      "Operational Technology",
+      "remote code execution",
+      "SCADA Security",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Two critical vulnerabilities impacting MLflow, an open-source artificial intelligence (AI) platform, and FUXA, an open-source, web-based SCADA / HMI software built for operational technology (OT) and industrial automation, are witnessing malicious scanning and exploitation efforts.",
+    "cve_ids": [
+      "CVE-2026-64849",
+      "CVE-2026-25895",
+      "CVE-2026-25939",
+      "CVE-2023-33831"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "NASA AIT-GUI Flaws Could Let Unauthenticated Attackers Issue Spacecraft Commands",
+    "url": "https://thehackernews.com/2026/08/nasa-ait-gui-flaws-could-let.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "Access Control",
+      "Application Security",
+      "critical infrastructure",
+      "CSRF",
+      "network security",
+      "Open Source Security",
+      "remote code execution",
+      "Software Security",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Security researchers at Cycode have disclosed a chain of flaws in AIT-GUI, the browser-based operator console for NASA/JPL's open-source AMMOS Instrument Toolkit, that allow an unauthenticated attacker to issue arbitrary commands to the software's spacecraft and instrument command bus.",
+    "cve_ids": [
+      "CVE-2026-60112",
+      "CVE-2026-47731",
+      "CVE-2026-71214",
+      "CVE-2026-71289",
+      "CVE-2024-35058"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Hackers Compromised 14,500+ Dahua Devices Using Credential Attacks, Auth Bypasses, and P2P",
+    "url": "https://thehackernews.com/2026/08/hackers-compromised-14500-dahua-devices.html",
+    "date": "2026-08-19T00:00:00.000Z",
+    "tags": [
+      "Authentication Security",
+      "Cyber Attack",
+      "Cybercrime",
+      "device security",
+      "exploit",
+      "iot security",
+      "network security",
+      "Surveillance Security",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "Cybersecurity researchers at Hunt.io have disclosed details of a campaign that they say compromised more than 14,530 Dahua devices between June 17 and July 22, 2026, using credential attacks, two authentication-bypass flaws, and a peer-to-peer (P2P) relay technique.",
+    "cve_ids": [
+      "CVE-2021-33044",
+      "CVE-2021-33045",
+      "CVE-2024-39943",
+      "CVE-2025-31702"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution",
+    "url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
+    "date": "2026-08-21T00:00:00.000Z",
+    "tags": [
+      "Cloud security",
+      "Cyber Attack",
+      "enterprise security",
+      "Identity Security",
+      "Microsoft",
+      "remote code execution",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "Microsoft on Thursday warned of a maximum-severity security flaw in Entra ID that it said has been exploited in the wild, but noted that no customer action is required.",
+    "cve_ids": [
+      "CVE-2026-69836",
+      "CVE-2026-68820"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE",
+    "url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html",
+    "date": "2026-08-18T00:00:00.000Z",
+    "tags": [
+      "AI Security",
+      "botnet",
+      "cryptocurrency",
+      "Cyber Attack",
+      "ddos",
+      "network security",
+      "Open Source",
+      "remote code execution",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a critical flaw impacting Ray to its Known Exploited Vulnerabilities ( KEV ) catalog, citing evidence of active exploitation.",
+    "cve_ids": [
+      "CVE-2025-62593"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "CDN Tsunami Attack Abuses HTTP/3 Translation for Up to 350x DoS Amplification",
+    "url": "https://thehackernews.com/2026/08/cdn-tsunami-attack-abuses-http3.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Cloud security",
+      "cybersecurity",
+      "ddos attack",
+      "Denial-of-Service",
+      "Internet Security",
+      "network security",
+      "Protocol Security",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Cybersecurity researchers have disclosed two denial-of-service (DoS) attacks that exploit how major content delivery networks (CDNs) convert client-facing HTTP/3 traffic into HTTP/1.1 requests to the websites they front, amplifying a low-bandwidth request stream by up to 350x against the origin server.",
+    "cve_ids": [
+      "CVE-2026-14456"
+    ],
+    "affected_products": [
+      "Alibaba",
+      "Baidu",
+      "Cloudflare",
+      "Amazon CloudFront",
+      "Fastly",
+      "Tencent"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure",
+    "url": "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
+    "date": "2026-08-21T00:00:00.000Z",
+    "tags": [
+      "API Security",
+      "Application Security",
+      "Code Injection",
+      "DevSecOps",
+      "enterprise security",
+      "Software Security",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "A newly disclosed security flaw in GitLab has come under active exploitation within days of public disclosure, according to watchTowr.",
+    "cve_ids": [
+      "CVE-2026-19478"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "SAP Commerce Cloud CVE-2026-58231 Targeted in Exploitation Attempts Days After Patch",
+    "url": "https://thehackernews.com/2026/08/sap-commerce-cloud-cve-2026-58231.html",
+    "date": "2026-08-15T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Cloud security",
+      "Cyber Attack",
+      "enterprise security",
+      "exploit",
+      "Patch Management",
+      "remote code execution",
+      "SAP",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "A maximum-severity security vulnerability impacting SAP Commerce Cloud is witnessing active exploitation efforts.",
+    "cve_ids": [
+      "CVE-2026-58231",
+      "CVE-2025-31324"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+    "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+    "date": "2026-08-12T00:00:00.000Z",
+    "tags": [
+      "Backdoor",
+      "cyber espionage",
+      "Malware",
+      "Nation-State",
+      "Phishing",
+      "Social Engineering",
+      "Threat Intelligence",
+      "Vulnerability",
+      "Windows Security",
+      "Zero-Day"
+    ],
+    "snippet": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting defense and aerospace companies across France, Germany, Brazil, and India.",
+    "cve_ids": [
+      "CVE-2026-68820",
+      "CVE-2025-49113"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+    "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+    "date": "2026-08-12T00:00:00.000Z",
+    "tags": [
+      "Adobe",
+      "Application Security",
+      "Code Execution",
+      "denial of service",
+      "enterprise security",
+      "Patch Management",
+      "privilege escalation",
+      "SQL Injection",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Adobe has shipped updates to address multiple critical security vulnerabilities impacting ColdFusion, Commerce, and Campaign Classic that, if successfully exploited, could result in arbitrary code execution and privilege escalation.",
+    "cve_ids": [
+      "CVE-2026-48449",
+      "CVE-2026-71362"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads",
+    "url": "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "remote code execution",
+      "Vulnerability",
+      "Web Security",
+      "Website Security",
+      "WordPress"
+    ],
+    "snippet": "A critical security flaw has been disclosed in Forminator Forms, a WordPress plugin with more than 600,000 active installations, that could be exploited to achieve arbitrary code execution on susceptible sites.",
+    "cve_ids": [
+      "CVE-2026-15748",
+      "CVE-2026-15826"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware",
+    "url": "https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "Advanced Persistent Threat",
+      "Cyber Attack",
+      "enterprise security",
+      "Identity Security",
+      "ransomware",
+      "server security",
+      "Threat Intelligence",
+      "Virtualization",
+      "VMware",
+      "Vulnerability"
+    ],
+    "snippet": "Cybersecurity researchers have attributed the exploitation of a newly patched security flaw in Broadcom VMware vCenter to a suspected China-nexus advanced persistent threat (APT).",
+    "cve_ids": [
+      "CVE-2026-59310",
+      "CVE-2026-59309"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE",
+    "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
+    "date": "2026-08-13T00:00:00.000Z",
+    "tags": [
+      "GeoServer",
+      "Open Source Security",
+      "remote code execution",
+      "SQL Injection",
+      "Vulnerability",
+      "Vulnerability Exploitation",
+      "Zero-Day"
+    ],
+    "snippet": "A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr.",
+    "cve_ids": [
+      "CVE-2024-36401",
+      "CVE-2023-25158",
+      "CVE-2023-25157"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Snowflake GitHub Actions Flaw Lets Crafted Issues Trigger Command Injection",
+    "url": "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets_0330881554.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "artificial intelligence",
+      "CI/CD Security",
+      "Cloud security",
+      "Credential Security",
+      "DevOps",
+      "Github Security",
+      "Software Supply Chain",
+      "Vulnerability"
+    ],
+    "snippet": "Cybersecurity researchers at Wiz have disclosed a new GitHub Actions workflow injection vulnerability in Snowflake's public snowflakedb/snowflake-connector-net repository that it said could be exploited through a crafted GitHub issue to execute commands in a workflow containing internal Jira credentials.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Elementor Pro Flaw Could Let Unauthenticated Attackers Upload PHP and Execute Code",
+    "url": "https://thehackernews.com/2026/08/elementor-pro-flaw-could-let.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "CMS Security",
+      "file upload",
+      "Malware",
+      "Plugin Security",
+      "remote code execution",
+      "Vulnerability",
+      "Web Security",
+      "Website Security",
+      "WordPress Security"
+    ],
+    "snippet": "Cybersecurity researchers have disclosed details of a critical flaw in the Elementor Pro WordPress plugin that, if successfully exploited, could lead to remote code execution.",
+    "cve_ids": [
+      "CVE-2026-32475",
+      "CVE-2026-65640"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Attackers Exploit SharePoint Authentication Bypass After Public PoC Release",
+    "url": "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+    "date": "2026-08-13T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Authentication Security",
+      "Cyber Attack",
+      "enterprise security",
+      "Identity Security",
+      "Microsoft",
+      "Patch Management",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "Threat actors have begun to exploit a newly disclosed Microsoft SharePoint vulnerability following the release of a proof-of-concept (PoC) code.",
+    "cve_ids": [
+      "CVE-2026-55040",
+      "CVE-2026-45659",
+      "CVE-2026-56164",
+      "CVE-2026-58644",
+      "CVE-2026-50522"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "\u00e2\u0161\u00a1 Weekly Recap: VMware Exploits, Windows 0-Day, MCP Attacks, Browser Hijacks and More",
+    "url": "https://thehackernews.com/2026/08/weekly-recap-vmware-exploits-windows-0.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "artificial intelligence",
+      "browser security",
+      "Cloud security",
+      "cybersecurity",
+      "Cybersecurity Recap",
+      "Identity Security",
+      "Malware",
+      "network security",
+      "Phishing",
+      "Vulnerability"
+    ],
+    "snippet": "The expensive attacks are not always the clever ones. Seventy-eight percent of practitioners now say AI is part of their cybersecurity strategy, up from 50% last year. Governance hasn't kept pace: just 36% have a formal AI risk program. See where 536 security professionals say programs are falling short, and what to do about it.",
+    "cve_ids": [
+      "CVE-2026-59310",
+      "CVE-2026-68820",
+      "CVE-2026-58231",
+      "CVE-2026-48362",
+      "CVE-2026-71398",
+      "CVE-2026-27302",
+      "CVE-2026-20349",
+      "CVE-2026-53413",
+      "CVE-2026-53414",
+      "CVE-2026-53415",
+      "CVE-2026-65400",
+      "CVE-2026-20337",
+      "CVE-2026-20338",
+      "CVE-2026-20339",
+      "CVE-2026-20345",
+      "CVE-2026-20346",
+      "CVE-2026-20347",
+      "CVE-2026-20348",
+      "CVE-2026-18412",
+      "CVE-2026-66147",
+      "CVE-2026-66145",
+      "CVE-2026-6726",
+      "CVE-2026-6727",
+      "CVE-2026-26035",
+      "CVE-2026-70468",
+      "CVE-2026-70465",
+      "CVE-2026-65640",
+      "CVE-2026-65321",
+      "CVE-2026-43637",
+      "CVE-2026-63720"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Apple macOS Screen Sharing Flaw Exploited on Internet-Exposed Macs to Install Monero Miner",
+    "url": "https://thehackernews.com/2026/08/apple-macos-screen-sharing-flaw.html",
+    "date": "2026-08-15T00:00:00.000Z",
+    "tags": [
+      "Active Exploitation",
+      "Apple",
+      "Authentication Security",
+      "cryptojacking",
+      "endpoint security",
+      "MacOS",
+      "Malware",
+      "network security",
+      "Remote Access Security",
+      "Vulnerability"
+    ],
+    "snippet": "A recently patched security flaw in Apple macOS has come under active exploitation in the wild to deploy a cryptocurrency miner, the Netherlands National Cyber Security Centre (NCSC-NL) has warned .",
+    "cve_ids": [
+      "CVE-2026-65400",
+      "CVE-2026-43760"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects",
+    "url": "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "API Security",
+      "Application Security",
+      "CSRF",
+      "cybersecurity",
+      "DevOps Security",
+      "Gitlab",
+      "Patch Management",
+      "Software Security",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "GitLab has released security updates to address a critical vulnerability impacting its Community Edition (CE) and Enterprise Edition (EE) software that, under certain conditions, could allow an unauthenticated attacker to remotely modify or delete public projects and user data.",
+    "cve_ids": [
+      "CVE-2026-19478",
+      "CVE-2026-19650"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "ThreatsDay: GhostJacking AI Attacks, EtherHiding ClickFix, Cursor CLI Flaw + 17 More Stories",
+    "url": "https://thehackernews.com/2026/08/threatsday-ghostjacking-ai-attacks.html",
+    "date": "2026-08-13T00:00:00.000Z",
+    "tags": [
+      "artificial intelligence",
+      "Cloud security",
+      "Cybercrime",
+      "cybersecurity",
+      "Malware",
+      "Privacy",
+      "ransomware",
+      "Threatsday Bulletin",
+      "Vulnerability"
+    ],
+    "snippet": "Some weeks have one big security story. Others bring many smaller updates that are easy to miss but still matter. This week has plenty of them, covering cloud services, AI tools, malware, data breaches, scams, and new attack methods. The threats change every week. Subscribe, and we\u00e2\u20ac\u2122ll alert you when each new ThreatsDay Bulletin is out. An ongoing campaign dubbed City-Forum has been observed targeting unauthenticated guest user access in both Salesforce Experience Cloud sites and ServiceNow (SNOW) Service Portals. \"A single server is pulling records out of Salesforce Experience Cloud sites and ServiceNow (SNOW) Service Portals, from infrastructure that has been standing since March 2025,\" Reco said. \"Except for Aura , the attacker reaches Salesforce Lightning Web Runtime ( LWR ) sites through the UI-API, a data layer we have not seen any public tool or write-up about, and it hammers a native ServiceNow Service Portal search endpoint that has almost no online documentation or well-known open source tools.\" The IP address in question is 158.220.87[.]79, which resolves to the domain \"city-forum[.]com,\" giving the campaign its name. The use of little known techniques in the activity points to an advanced threat actor. Data is exfiltrated from Salesforce LWR sites using GraphQL. Targets include telecoms, banks and financial-services firms, enterprise-software vendors including security and data-privacy companies, and public-sector portals. Per Reco, the busiest target recorded more than 560,000 events from the attacker's IP address, with nearly all of them related to guest Aura enumeration. ShipMonk, one of Trezor's shipping providers, has experienced a data breach that exposed sensitive customer order data, including full names, shipping addresses, phone numbers, and email addresses. \"This data breach can potentially affect new customers who received an order from the following countries: the U.S., the U.K., Sweden, Colombia, Brazil, Italy, and Portugal between 10th of May and 8th of August 2026,\" Trezor said . Cursor has fixed an issue in its command-line (CLI) coding agent that allowed a cloned repository to run any command on a developer's machine before they were prompted if they trusted it, and outside the sandbox even when the sandbox had been explicitly enabled. \"A repository could execute any command it chose on your machine, as you, the moment you started Cursor's CLI agent in it with -w,\" Manifold Security said . \"It ran before the workspace-trust dialog, and fired even for users who had explicitly passed --sandbox enabled. The command sat in a normal tracked file, .cursor/worktrees.json, so it arrived with an ordinary git clone. Nothing on that path constrained it: reading ~/.ssh, taking cloud credentials from the environment, opening a reverse shell, writing persistence.\" Following responsible disclosure on July 20, 2026, a patch was released three days later. Okta has published details about Work Panel, an operator console that's used by threat actors running vishing campaigns targeting identity providers, including itself. \"Work Panel is a multi-tenant platform that packages everything an operator needs to run a vishing-driven account takeover operation,\" the company said . \"Registering a new phishing domain, cloning a target brand, and standing up a new isolated phishing site are each one-button operations. New campaigns can be launched in minutes.\" Work Panel is used by infrastructure owners, campaign managers, and outsourced callers, indicating a cybercrime ecosystem that supports such voice phishing campaigns at scale. One threat actor that uses Work Panel is UNC6671 (aka Cordial Spider and O-UNC-045). \"It is a full web application designed to run a vishing-driven account takeover business,\" Okta added. \"The console organizes the work into multiple sections covering target recon, voice-call routing, brand cloning, infrastructure provisioning, live session management, captured-credential review, and an audit log. Different roles see different tabs, and the access boundary is enforced on the server rather than hidden in the client.\" A new attack called GhostJacking expands on Agentjacking to trick AI agents into running arbitrary code on developer machines, once again highlighting the need for securing the AI supply chain. The attack can leverage something as simple as a poisoned log or alert to make the agent act on the attacker's data, escalate privileges and pivot to enterprise cloud infrastructure, exfiltrate data to the attacker (in this case, using a now-patched sandbox escape in Anthropic's Claude Desktop), and establish persistence by leaving a backdoor in the agent's configuration. \"Companies are handing AI agents the keys to their code, their monitoring, and their infrastructure,\" Tenet Security said . \"An AI cannot tell a real instruction from a trap hidden in the data it reads. The usual defenses do not fire, because nothing breaks a rule. Every step is something the agent was already allowed to do.\" The findings underscore the need for guardrails around AI agents to protect against hijacking attacks that leverage their legitimate access and elevated privileges against their users. Meta has announced a new optional feature called Scam Alert that makes use of an on-device machine learning model to alert a user about potential scam messages. \"No message content leaves the device for classification or is auto-reported to WhatsApp, Meta, or anyone else,\" the company said . \"The feature complements end-to-end encryption while enabling a user-controlled, optional scam alert when the model believes there's a likely scam.\" The model, Meta added, is trained on patterns observed in scam conversations from reports that users have sent to it. Meta said it has also built a privacy-preserving federated analytics pipeline that collects only two categories of data: counts of how often warnings were triggered and counts of what action users took afterward, such as blocking or marking a chat as trusted. Messaging app Signal has announced a new automatic key verification feature that complements the existing safety number system to provide an \"additional, streamlined way to confirm that there's no unexpected party between you and the other 'end' of an end-to-end encrypted session.\" Signal said : \"It works through a system of verifications performed by you, your Signal connections, and third-party auditors that together provide the same assurance as manually verifying safety numbers. Unlike safety numbers, these verifications are done independently and do not require an in-person meeting or a secondary communication channel. This system of verifications ensures that the association between a phone number or username and its public encryption key is globally consistent and transparent to all participants in Signal's ecosystem.\" Users can enable automatic key verification in Signal by going to Settings > Privacy > Advanced and enabling the setting. A new approach devised by Tracebit has proven very effective at stopping AI agents from fully compromising targeted environments. While prompt injections have proven to be a thorny problem ailing AI systems, the technique, called Context Bombs, uses prompt injections not to hijack AI agents to defend against them. Using decoy resources as tripwires that alert defenders about potential unauthorized activity is not wholly novel. These are known as canaries , which are hidden inside real files or networks that trigger an alert the moment it is accessed. Only in this case, it is used to stop the AI agent from performing something malicious. \"A context bomb is simply a string crafted to provoke that refusal for benign reasons rather than malicious ones,\" Tracebit said . \"The defender plants it, and when the model or model provider encounters it, safety mechanisms are triggered which stops the agent from proceeding.\" The findings are significant in light of the fact that autonomous and semi-autonomous AI agents accelerate the pace and scale of attacks, while defenders have little time to react and counter them. A fake version of CCleaner delivered via a bogus lookalike page (\"ccleanerwind[.]top\") is being used to infect Windows users with a malicious Chrome extension called GhostDesk, which harvests sensitive data from the browser. \"Once installed, the fake application launches an attack that modifies Chrome, installs malicious extension components, and gives attackers the ability to steal credentials, capture screenshots, and log keystrokes,\" Malwarebytes said . There is evidence to suggest that the same mechanism is being used to serve counterfeit versions of 7-Zip and Adobe Acrobat Reader. Apple has paid a $150,000 bug bounty to a security researcher who found a way to leak sensitive data from Private Cloud Compute ( PCC ), its secure AI inference environment. The vulnerability, rooted in a component called \"darwin-init\" and tracked as CVE-2026-20685 (CVSS score: 6.5), allows an attacker in a privileged network position to leak sensitive information. Apple said the issue was addressed with improved validation. Drinor Selmanaj, who discovered the issue, described it as a \"path traversal in the code that provisions PCC nodes, darwin-init, that lets an attacker write files as root and compromises privacy and security guarantees in PCC.\" An active ClickFix malware campaign leveraging a novel technique known as EtherHiding using the Polygon blockchain to obfuscate and dynamically rotate command-and-control (C2) infrastructure. \"A compromised WordPress site was found serving a malicious script embedded in its robots.txt file,\" Cribl said . \"When visited, the script queries the Polygon blockchain via public RPC endpoints, calling a smart contract to retrieve an encoded second-stage C2 domain. By storing malicious domains in blockchain transaction data rather than traditional infrastructure, the attacker gains a resilient, censorship-resistant delivery mechanism that is difficult to detect and block through conventional means.\" Malicious skills or extensions installed directly from public marketplaces, while offering an extensibility model, also exposes developers to an attack surface, where an AI coding agent is leveraged as a delivery and execution mechanism for malicious actions, such as credential theft, by taking advantage of the fact that it was configured in an \"unattended\" or \"auto-approve\" execution mode, granting it the ability to execute shell scripts without requiring user confirmation. \"Located within the agent's local skills directory was a package disguised under an innocuous, business-aligned name designed to mimic a routine approval workflow,\" CyberProof said . The package is designed to enumerate running browser processes and decrypt stored credentials. \"Because the agent operated in auto-approve mode, this entire sequence executed silently twice within 15 minutes without presenting authorization prompts to the end user,\" CyberProof said. \"Standard binary reputation lookups, signature validation, and application allow-listing controls failed to trigger alerts because the malicious payload resided entirely within the uncompiled script content of an add-on skill package.\" The U.S. Federal Bureau of Investigation (FBI) has warned of sexual exploitation (SE) actors targeting adult and underage victims by illegally accessing their social media and personal accounts to steal and post their explicit content for sale on criminal marketplaces. \"SE actors are using a variety of social engineering and cyber intrusion tactics to target specific individuals of interest \u00e2\u20ac\u201d who may or may not be known to the actor \u00e2\u20ac\u201d or general targets of opportunity,\" the FBI said . \"Once the sexually explicit images or videos are accessed and stolen, typically unbeknownst to the victim, SE actors are sharing or posting the content within community forums or selling them to illicit marketplaces. Personally identifiable information \u00e2\u20ac\u201d such as name, date of birth, email, phone number, and social media username \u00e2\u20ac\u201d is often posted along with the victim's explicit content, exposing them to continued re-victimization.\" Initial access methods include trying different passwords or PINs found on data leak sites and other sources, social media customer service impersonation, and phishing. ExfilSquad has emerged as a new threat actor to watch out for after having claimed responsibility for a string of high-profile data breaches. The group first appeared in mid-2026. \"Notably, the group does not typically deploy ransomware or destructive malware; instead, they threaten to leak stolen data on a dedicated onion-based Data Leak Site (DLS) unless a ransom is paid,\" Resecurity said . \"The notable pattern is the strong targeting of CRM, internal case management systems, and AI platforms used to collaborate with consumers.\" The leaked files are accessible over a torrent file, allowing it to reach a broader audience. \"Once stolen data has been released, it is not possible to stop its sharing via the P2P network or remove the torrent file, because other participants involved in seeding can easily resume downloads,\" Resecurity said. Google has announced that Chrome's anti-abuse systems reduced unwanted notifications on Android by more than 7 billion per day during the first quarter of 2026, as it tackles notification abuse . The company said it has built \"advanced behavioral detection\" to more quickly identify and remove permissions from networks of sites that coordinate and send abusive notifications, implemented message rate limits for the Push API on Firebase Cloud Messaging (FCM) to tackle high-volume notification abuse, and streamlined the notifications permission model to \"prioritize user agency while making it harder for abusive actors to acquire and retain permissions.\" A set of six npm packages have been observed using an Ethereum wallet address linked to North Korean threat actors to fetch next-stage JavaScript payloads. Three of them (@kolbo/mcp@1.57.1, agentgui@1.0.1127, and godot-kit@1.0.1786316795) are legitimate npm packages that seem to have been hijacked to publish malicious versions, while three others have been flagged as malicious: envpack-conf@1.0.1, postcss-initial-provider@3.0.4, and tailwindcss-motion-advanced@1.0.1. \"The payload uses Ethereum blockchain transactions to locate infrastructure hosting additional JavaScript malware,\" Sonatype said . \"When executed, the loader queries Ethereum for an outbound transaction from that wallet and reads bytes from the transaction\u00e2\u20ac\u2122s recipient address. Those bytes are decoded into two IPv4 addresses, which the malware treats as primary and secondary command-and-control (C2) endpoints. The Ethereum transaction acts as a dead drop for instructions telling the malware where to connect next.\" The technique has been codenamed NullReceiver , an evolution of EtherHiding. Recorded Future's Insikt Group said it analyzed 24 threat actors advertising crypting services and products within the past year, describing it as a market that is competitive, reputation-driven, and primarily focused on Windows payloads. Crypters are tools that modify malicious software to bypass detection and complicate analysis. While advanced crypters offer portability, anti-analysis, process injection, persistence, and security product bypass capabilities, less-advanced crypters generally provide basic payload obfuscation techniques. Some of the threat actors marketing such tools include mrlapis (VIP Crypt), o1oo1 ( ASMCrypt and SnappyClient aka TOP RAT), ImComplexed, BestCrypt0r, Cruciferra , DefCrypt, ghostcrypt, GoldenCrypt , and mila.laktina. \"Providers advertise through underground forums, restricted communities, chat platforms, clearnet sites, and social media accounts,\" the company said . \"They compete through tiered pricing, antivirus (AV) detection scores of crypted samples, discounts, malware-developer partnerships, private or shared stubs, and promised turnaround times for re-crypting detected payloads.\" Cybersecurity firm Dragos said it identified 1,140 ransomware incidents affecting industrial organizations worldwide in the second quarter of 2026, a 12% increase compared to Q1. \"Manufacturing was the most affected sector with 747 incidents (65%) across all subsectors,\" it said . ICS-related organizations (engineering firms, system integrators, and equipment manufacturers) accounted for the second-most-impacted sector, with 117 incidents, reflecting persistent industrial supply chain exposure. The extortion model continued to shift away from encryption toward data theft-only operations, and geopolitically influenced activity, including state-aligned actors operating behind ransomware branding, persisted throughout the quarter.\" Qilin (140), Akira (129), The Gentlemen (125), DragonForce (76), and LockBit 5.0 (62) were responsible for the largest victim volumes in Q2. GitHub said it has enhanced the GitHub Advisory Database to ingest malware reports from OpenSSF's malicious-packages repository, to account for eight major package ecosystems: npm, PyPI, Maven, RubyGems, NuGet, Go, crates.io, and PHP Composer. \"Dependabot and GitHub will now alert you if you use a malicious dependency across most package ecosystems,\" GitHub said . \"Malware alerts are opt-in: enable them in your repository, organization, or enterprise security settings. Dependabot will match your dependencies against malware advisories in the Advisory Database, including a backfill against existing advisories, starting the moment you turn it on.\" Cloudflare said it mitigated 23.2 million network-layer and 29.64 trillion HTTP DDoS requests since the start of 2026. Hyper-volumetric DDoS \u00e2\u20ac\u201d attacks defined as exceeding 1 terabit per second (Tbps), 1 billion packets per second (Bpps), or 1 million requests per second (Mrps) \u00e2\u20ac\u201d have witnessed a surge, with the web infrastructure company mitigating 805 network-layer attacks exceeding 1 Tbps, representing a more than six-fold increase over the previous quarter. The top attacked industries during the time period were media, gambling, IT services, computer software, and telecommunications providers. The U.S., China, Indonesia, Turkey, and France were the most attacked locations, while the traffic originated from Brazil, the U.S., Indonesia, China, and Germany.",
+    "cve_ids": [
+      "CVE-2026-20685"
+    ],
+    "affected_products": [
+      "Cloudflare"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "ThreatsDay: Gogs 10.0 RCE, n8n Workflow-to-RCE, $10M Reward, GLM-5.3 AI Exploit, and More",
+    "url": "https://thehackernews.com/2026/08/threatsday-gogs-100-rce-n8n-workflow-to.html",
+    "date": "2026-08-20T00:00:00.000Z",
+    "tags": [
+      "artificial intelligence",
+      "Cloud security",
+      "Cybercrime",
+      "cybersecurity",
+      "Malware",
+      "Privacy",
+      "ransomware",
+      "Threatsday Bulletin",
+      "Vulnerability"
+    ],
+    "snippet": "A lot of this week\u00e2\u20ac\u2122s trouble starts with something trusted doing exactly what it was allowed to do. The threats change every week. Subscribe, and we\u00e2\u20ac\u2122ll alert you when each new ThreatsDay Bulletin is out. In new research, Check Point has reverse engineered Microsoft Defender's Defender Boot-Time Removal driver (\"BTR.sys\") and demonstrated that it's possible to repurpose the signed remediation driver as a universal kernel operation engine to bypass endpoint security solutions by exploiting a \"golden window\" between system start and user mode initialization without having to rely on the bring your own vulnerable driver (BYOVD) method. \"Because BTR.sys is a legitimate Microsoft-signed component, signature-based blocking is ineffective,\" security researcher Ji\u00c5\u2122\u00c3\u00ad Vinopal said . \"Furthermore, a well-crafted weaponization tool (like BTR_CLI ) intentionally mimics the operational footprint of the legitimate Windows Defender remediation process.\" The U.S. Department of Justice (DoJ) has charged 17 members of the Mabna Institute, an Iran-based company that, since at least 2013, has conducted a coordinated campaign of cyber intrusions into computer systems for 144 U.S.-based universities, 178 foreign universities, at least 42 U.S.-based private sector companies, at least 11 foreign private sector companies, at least five U.S. federal and state government agencies, and at least two non-governmental organizations (NGOs). The Mabna Institute has been accused of stealing more than 31 TB of academic data and intellectual property from these universities, as well as the email accounts of employees at the private sector companies, government agencies, and NGOs. In all, the Mabna Institute targeted more than 100,000 accounts of professors around the world, successfully compromising approximately 8,000 of them. The defendants carried out these intrusions on behalf of Iran's Islamic Revolutionary Guard Corps (IRGC). The Mabna Institute was founded by Gholamreza Rafatnejad and Ehsan Mohammadi around 2013. \"The campaign started in approximately 2013, continued through at least December 2017, and broadly targeted all types of academic data and intellectual property from the systems of compromised universities,\" the DoJ said. \"In addition to stealing academic data and login credentials for the benefit of the Government of Iran, the defendants also sold the stolen data through two websites, Megapaper.ir (Megapaper) and Gigapaper.ir (Gigapaper).\" The U.S. Department of State is offering a $10 million reward for information about five of the defendants, or associated individuals or entities. \"Mabna represents the privatization of state espionage: a contractor selling stolen research to whoever's paying, with the IRGC as an anchor client rather than a sole owner,\" Shmuel Gihon, Security Research Team Lead of Exposure Management at Check Point, told The Hacker News. \"That's the trend to watch: capable, deniable, commercially-run crews doing state-level work at industrial scale, with universities as the perfect target. They offer enormous IP value, thin identity controls, and an open-access culture that phishing exploits directly. We've seen this blurring of cyber-criminal and state-sponsored activity before, but historically it's been more associated with Russian-speaking crews. What this case shows is that Iran and the IRGC are increasingly playing the same game.\" A new Grandoreiro malware campaign has been found abusing the legitimate Duplicate Files Finder (DFF) application to run malicious code via DLL sideloading. According to telemetry data from Acronis, Grandoreiro activity remains concentrated in Latin America, with Mexico, Spain, Peru, and Argentina accounting for the lion's share of infections. \"The initial sample incorporates extensive anti-analysis functionality, including sandbox detection, virtual machine artifact checks, process blacklisting and environment profiling designed to evade automated analysis systems,\" Acronis said . \"These checks are performed before any attempt to contact the command-and-control (C2) infrastructure, suggesting that avoiding analysis is a high priority for the operators.\" ErrTraffic -generated ClickFix campaigns have been observed attempting to deliver Cruciferra , which, in turn, employs a legitimate but vulnerable driver (\"DCRCVDrv.sys\") as part of a BYOVD attack to escalate privileges and terminate security processes. ErrTraffic, sold by a threat actor named LenAI, is a malware-as-a-service (MaaS) framework and a traffic distribution system (TDS) that's designed to distribute multiple threats through compromised WordPress websites, ClickFix social engineering, and EtherHiding. In recent months, ErrTraffic has been used to deliver Remus Stealer, Vidar Stealer, Okobot, LegionLoader, OnionDrop-related payloads, and BabaDedaLoader, per WatchGuard . \"Victims land on compromised WordPress sites injected with an obfuscated ErrTraffic-generated JavaScript loader,\" eSentire said . \"The loader resolves its C2 domain by querying a Polygon smart contract, then sends a request to the C2 to retrieve the next stage to serve a ClickFix lure.\" The end goal of the attack is to launch Remus Stealer via process hollowing. OpenAI has announced a privacy-centric safety approach to monitoring model misuse. The company said it's previewing a new service to select customers that it calls Private Safety Processing, which keeps tabs on potential abuse without retaining customer data. \"For ZDR deployments, customer content remains on infrastructure the customer controls,\" OpenAI said. \"We are also developing an option in which content is stored on OpenAI infrastructure, encrypted with keys controlled by the customer. In both cases, automated systems can identify potential misuse and return limited safety signals without exposing the underlying prompts or responses to OpenAI personnel.\" The system clearly takes aim at rival Anthropic, which has a 30-day retention policy for business customers who want to use its Mythos-class models. In a related development, Google has showcased Homomorphic Encryption Intermediate Representation ( HEIR ), which enables cryptographically secure private AI inference on encrypted inputs. \"HEIR (Homomorphic Encryption Intermediate Representation) is an open-source compiler toolchain and development platform for homomorphic encryption,\" Google said. \"In particular, HEIR can convert pre-trained AI models that operate on unencrypted data to operate on encrypted inputs.\" A new AI-powered service called Kriminal AI offers paying customers a way to get answers about everything, without any of the filters or guardrails that are typically implemented by AI platforms. \"Kriminal.AI gives you raw, uncut intelligence \u00e2\u20ac\u201d the questions other AIs refuse to touch,\" the website claims. The service claims to have more than 2,300 users. Kriminal AI follows WormGPT, FraudGPT, and Xanthorox into a market that has expanded quickly to attract users who may be frustrated by safety, security, and ethical safeguards embedded into widely used models. Subscriptions for Kriminal AI start at $12.99/month and go all the way to $99.00/month. The most concerning aspect is that the service is not lurking in the dark web. It's accessible on the clearnet, and comes with a tagline: \"No filters. No guardrails. No \"I can't help with that.\" Kriminal.AI gives you raw, uncut intelligence \u00e2\u20ac\u201d the questions other AIs refuse to touch.\" According to ThreatDown , the service appears to make use of Grok for primary inference; Google Cloud and Cloudflare for hosting; Anthropic's Claude for a long-context model layer; Llama routed through OpenRouter for certain specialized tasks; Tavily for live search; NowPayments for cryptocurrency checkout (no KYC included, apparently); and Cloudflare/Let's Encrypt for DNS and TLS. Apple has agreed to make changes to its App Tracking Transparency (ATT) feature in Germany, after the Federal Cartel Office, or FCO, found the feature gave its own \u00e2\u20ac\u2039apps more favorable consent prompts than those of \u00e2\u20ac\u2039third-party developers. Apple has four months to implement the changes after. According to a statement issued by Apple, the changes will apply in almost all \u00e2\u20ac\u2039European Union countries. \"The differences between the consent request used for Apple\u00e2\u20ac\u2122s own offerings and the consent request predefined by Apple for third-party apps exceeded what could be justified based on differences in types of data processing,\" FCO said . \"The wording, design and selection options of the request used for Apple\u00e2\u20ac\u2122s own offerings had the potential to encourage users to give their consent, whereas they had the potential to discourage consent for third-party apps. In addition, third-party apps in some cases had to request consent several times even when users had already given data protection law-compliant consent.\" Apple was fined \u00e2\u201a\u00ac98.6 million (then $116 million) in December 2025 by Italy's antitrust authority after finding that ATT restricted App Store competition. Claroty's Team82 has discovered 23 vulnerabilities in Copeland XWEB Pro controllers, including those that can be chained to bypass security mechanisms and achieve root-level remote code execution. A compromised controller could be used to remotely manipulate refrigeration equipment, including cooling fans and compressors, and conceal the resulting temperature increase while silently allowing the food to spoil. Multiple vulnerabilities have also been disclosed in Danfoss AK-SM 800A refrigeration controllers, including a \"hidden 'code-of-the-day' authentication mechanism that could be abused to bypass normal authentication, a command-injection vulnerability leading to remote code execution.\" A second flaw allowed authenticated users to inject arbitrary Nginx configuration directives, which could be abused to manipulate web traffic and trigger a denial-of-service condition. All the identified vulnerabilities have been fixed by the respective vendors. A hand-written Windows backdoor has been found to store its C2 domain as the number of trailing spaces in a fake desktop.ini file. The 12 KB backdoor was discovered by Gen Digital on a single corporate workstation while hunting for unusual WMI persistence. \"The malware was small, had a limited command set and disguised itself as legitimate Realtek software,\" Gen said . \"Its most unusual feature was its configuration: the address of its command-and-control server was not stored as readable text or encrypted data, but encoded in the number of spaces on each line of a Windows 'desktop.ini' file. To a user, and to many automated inspection systems, the file would appear almost empty. To the malware, those spaces spelled out its server address.\" There is no evidence connecting the backdoor to a known threat actor. The absence of related samples indicates that it may have been a deliberately targeted operation. A maximum-severity security flaw in Gogs (CVE-2026-52813, CVSS score: 10.0) could be exploited to achieve remote code execution through Git hooks. \"Organization names containing path traversal sequences (../) are accepted by Gogs, and repositories under them are written to paths following these path traversals,\" according to a June 2026 advisory. \"This allows storing/retrieving data for repositories at arbitrary locations on the filesystem. By creating a nested structure of Git repositories, one can overwrite the other's hooks configuration to result in Remote Code Execution (RCE).\" The issue was addressed in version 0.14.3, alongside patches for CVE-2026-52810 (a logic bug to write on read-only repositories) and GHSA-6vxv-wg6j-5qwp (an XSS flaw in the outdated version of \"jsvine/notebookjs\" used to render Jupyter notebook files). Aikido Security has been credited with discovering and reporting the flaws. Details have emerged about a now-patched out-of-bounds read flaw in Apple macOS Spotlight ( CVE-2026-43774 , CVSS score: 5.5) that could be exploited by a malicious app to access sensitive user data. The vulnerability was patched by the iPhone maker in late July 2026. \"The vulnerability is in the Spotlight PostScript plugin,\" Iru researcher Csaba Fitzl said , adding an attacker can use a specially crafted .ps file to trigger the vulnerability. It requires three conditions to be met: (1) The file is at least 4000 bytes, (2) A DSC comment keyword (e.g., %%Creator:) appears somewhere in the first 4000 bytes, and (3) The bytes following the keyword, up to byte 4000, contain no control characters. A critical security flaw has been disclosed in @circleci/mcp-server-circleci that could result in remote code execution by means of a specially crafted request. \"With one well-placed request, an attacker achieves an unauthenticated RCE in your CI/CD pipeline, taking full control of your build secrets and cloud identities,\" Remedio said . The attack takes advantage of the fact that the Host and Origin headers associated with an HTTP request used to block browser-based attacks can be set by a network-adjacent threat actor. \"Send a simple HTTP request that says Host: localhost in the HTTP header with no Origin, and you get right through,\" Remedio said. \"Once in, you can freely communicate with connected tools. Call the \"run pipeline\" tool, hand it the pipeline configuration you wrote, and add a step to run your commands. CircleCI executes it using the organization's token.\" The vulnerability has been fixed in version 0.19.2 of the npm package. A critical vulnerability in n8n, an open-source workflow automation platform, can allow an authenticated user with permission to create or modify workflows to exploit a prototype pollution vulnerability in the XML and the GSuiteAdmin nodes and achieve remote code execution on the n8n instance. The issue ( CVE-2026-33696 , CVSS score: 9.4) has been fixed in versions 2.14.1, 2.13.3, and 1.123.27. Security researcher Simon Koeck, who discovered the Flaw, said the prototype pollution alone is serious enough to crash the entire n8n instance, but can be chained to obtain full code execution and allows the attacker's command to be run as the n8n process user. In late 2024, reports emerged of a Salt Typhoon campaign that targeted T-Mobile and other major U.S. telecommunications companies as part of a cyber espionage effort to gain access to valuable customer data. Although the activity was caught before the Chinese cyber spies could siphon any data from T-Mobile's networks, the company has now revealed to Bloomberg that its staff spent months looking for suspected intruders without much success, only to eventually trace unusual behavior on one of its systems coming from a Chicago router belonging to a different telecom company. Jeff Simon, T-Mobile's chief information officer, said he and three others drove to the data center that housed the compromised device and \"pulled out a pair of scissors\" to cut the cable. Chinese AI startup Z.ai has released GLM-5.3, a new AI model that it said is better suited for complex coding and long-horizon tasks. \"GLM-5.3 is state of the art on CyberGym for vulnerability discovery, and its gains are largest further up the exploitation chain, where it more than doubles GLM-5.2 on exploitation benchmarks,\" it said. \"GLM-5.3 did not simply become better at identifying isolated flaws: it began to reason across multiple stages of exploitation, forming coherent plans for complete exploitation chains,\" Z.ai said it has been working with several security teams in China to run its open-source models against real-world codebases, identifying 2,436 vulnerabilities across 269 projects, including 1,097 medium-to-high severity issues. \"The findings span system kernels, operating systems, browser engines, open-source infrastructure, web applications, and network protocols,\" it said. \"Many had remained unnoticed for years or even decades, with the oldest dating back roughly 40 years.\" Despite these advances, benchmarks show that GLM-5.3 lags behind Anthropic Mythos 5 in converting discovered flaws into working attacks.",
+    "cve_ids": [
+      "CVE-2026-52813",
+      "CVE-2026-52810",
+      "CVE-2026-43774",
+      "CVE-2026-33696"
+    ],
+    "affected_products": [
+      "Cloudflare"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "How MCP Servers Can Expose Enterprise Secrets",
+    "url": "https://thehackernews.com/2026/08/how-mcp-servers-can-expose-enterprise.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "Access Control",
+      "AI Security",
+      "Application Security",
+      "Cloud security",
+      "enterprise security",
+      "Identity Security",
+      "Prompt Injection",
+      "Secrets Management",
+      "Supply Chain Security",
+      "Vulnerability"
+    ],
+    "snippet": "MCP servers can expose enterprise secrets through plaintext configuration files, over-permissioned access and prompt injection, often before security teams even know the server is running. As more organizations adopt AI agents into their systems, that exposure can silently become a major gap in MCP server security. The Model Context Protocol (MCP) allows AI agents to reach the tools and data, including internal documentation and cloud infrastructure, that form the foundation of enterprise systems. Behind that convenience, the MCP server connecting those tools and data to enterprise systems typically holds the keys to everything it touches: credentials, service account keys, API tokens and other secrets. Every organization should now question what secrets they are handing to AI and how well those secrets are protected once they reach an MCP server.",
+    "cve_ids": [
+      "CVE-2025-6514"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Evooo1Bot Linux Botnet Exploits Known Flaws to Turn Edge Devices Into SOCKS5 Proxies",
+    "url": "https://thehackernews.com/2026/08/evooo1bot-linux-botnet-exploits-known.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "botnet",
+      "Credential Theft",
+      "ddos",
+      "iot security",
+      "Linux security",
+      "Malware",
+      "network security",
+      "router security",
+      "Threat Intelligence",
+      "Vulnerability"
+    ],
+    "snippet": "Cybersecurity researchers have flagged a previously undocumented Linux botnet family dubbed Evooo1Bot that derives its core functionality from the Mirai botnet source code and is equipped to turn internet-facing devices into SOCKS proxies.",
+    "cve_ids": [
+      "CVE-2021-36260",
+      "CVE-2022-26134",
+      "CVE-2022-29464",
+      "CVE-2022-30525",
+      "CVE-2023-1389",
+      "CVE-2024-4577",
+      "CVE-2024-10914",
+      "CVE-2025-1974"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Attackers Exploit VMware vCenter Vulnerability to Gain Persistent Remote Access",
+    "url": "https://thehackernews.com/2026/08/attackers-exploit-vmware-vcenter.html",
+    "date": "2026-08-12T00:00:00.000Z",
+    "tags": [
+      "APT",
+      "enterprise security",
+      "exploit",
+      "network security",
+      "Patch Management",
+      "remote code execution",
+      "server security",
+      "Threat Intelligence",
+      "VMware",
+      "Vulnerability"
+    ],
+    "snippet": "Threat actors have begun to actively exploit a recently patched critical security flaw in Broadcom VMware vCenter, according to new findings from QUIRSO.",
+    "cve_ids": [
+      "CVE-2026-59310",
+      "CVE-2026-59309"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "AmnesiaStealer Hijacks Chromium Sessions to Give Attackers Live Browser Control on macOS",
+    "url": "https://thehackernews.com/2026/08/amnesiastealer-hijacks-chromium.html",
+    "date": "2026-08-13T00:00:00.000Z",
+    "tags": [
+      "apple security",
+      "browser security",
+      "Credential Theft",
+      "cryptocurrency",
+      "endpoint security",
+      "Information Stealer",
+      "macos security",
+      "Malware",
+      "Social Engineering",
+      "Vulnerability"
+    ],
+    "snippet": "Cybersecurity researchers have disclosed details of a new macOS-oriented, Rust-based information stealer called AmnesiaStealer that's capable of hijacking Chromium web browsers to steal session data.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "SAP Commerce Cloud Flaw Could Let Unauthenticated Attackers Execute Arbitrary Code",
+    "url": "https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html",
+    "date": "2026-08-12T00:00:00.000Z",
+    "tags": [
+      "Application Security",
+      "Cloud security",
+      "Code Execution",
+      "enterprise security",
+      "Patch Management",
+      "SAP",
+      "Vulnerability",
+      "Web Security"
+    ],
+    "snippet": "SAP has released patches to address a maximum-severity security flaw impacting Commerce Cloud (Data Hub Adapter) that could result in arbitrary code execution.",
+    "cve_ids": [
+      "CVE-2026-58231",
+      "CVE-2026-44758",
+      "CVE-2026-44772"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Unisoc VoLTE Video Call Exploit Chain Can Give Attackers Full Android Kernel Access",
+    "url": "https://thehackernews.com/2026/08/unisoc-volte-video-call-exploit-chain.html",
+    "date": "2026-08-17T00:00:00.000Z",
+    "tags": [
+      "Android security",
+      "Chip Security",
+      "Firmware Security",
+      "hardware security",
+      "Kernel Security",
+      "mobile security",
+      "privilege escalation",
+      "remote code execution",
+      "Telecom Security",
+      "Vulnerability"
+    ],
+    "snippet": "Security researchers at SSD Secure Disclosure have published a two-stage exploit chain that achieves full Android kernel access on devices running Unisoc modem firmware through a VoLTE video call, with no fix from the chipset maker.",
+    "cve_ids": [
+      "CVE-2025-31718",
+      "CVE-2022-20210"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "Malicious LiteLLM Releases Tied to Trivy Hack May Have Exposed 2,100+ Organizations",
+    "url": "https://thehackernews.com/2026/08/malicious-litellm-releases-tied-to.html",
+    "date": "2026-08-12T00:00:00.000Z",
+    "tags": [
+      "AI Security",
+      "CI/CD Security",
+      "Cloud security",
+      "Credential Theft",
+      "Kubernetes Security",
+      "Malware",
+      "Open Source Security",
+      "Python Security",
+      "Software Supply Chain",
+      "Vulnerability"
+    ],
+    "snippet": "Two malicious LiteLLM releases sat on PyPI for about 40 minutes in March carrying credential-stealing code capable of harvesting cloud keys, SSH keys, Kubernetes tokens, database passwords, and other secrets from systems that installed them.",
+    "cve_ids": [
+      "CVE-2026-33634"
+    ],
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  },
+  {
+    "title": "OpenAI, Anthropic, Google API Flaw Let Weaker AI Models Decode Stronger Models' Reasoning",
+    "url": "https://thehackernews.com/2026/08/openai-anthropic-google-api-flaw-let.html",
+    "date": "2026-08-12T00:00:00.000Z",
+    "tags": [
+      "AI Security",
+      "API Security",
+      "Application Security",
+      "artificial intelligence",
+      "Data Exposure",
+      "Privacy",
+      "Prompt Injection",
+      "Vulnerability"
+    ],
+    "snippet": "A newly disclosed flaw in the way OpenAI, Anthropic, and Google carried hidden AI reasoning between API calls let researchers recover internal reasoning and secrets from session logs, including API keys and passwords.",
+    "input": {
+      "url": "https://thehackernews.com/search/label/Vulnerability"
+    }
+  }
+]
